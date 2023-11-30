@@ -1,0 +1,203 @@
+2023-11-29 12:37:57.645 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-29 12:37:59.378 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-29 12:37:59.504 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-29 12:37:59.539 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-29 12:37:59.549 +05:30 [INF] Hosting environment: Development
+2023-11-29 12:37:59.561 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-29 12:38:06.651 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-29 12:38:09.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 2794.9449ms
+2023-11-29 12:38:09.848 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-29 12:38:09.847 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-29 12:38:10.077 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 228.7821ms
+2023-11-29 12:38:12.146 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 2298.2481ms
+2023-11-29 12:38:12.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-29 12:38:12.839 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 546.8726ms
+2023-11-29 18:18:03.081 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-29 18:18:03.466 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-29 18:18:03.468 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-29 18:18:03.472 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-29 18:18:03.473 +05:30 [INF] Hosting environment: Development
+2023-11-29 18:18:03.474 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-29 18:18:07.671 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-29 18:18:08.223 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-29 18:18:08.225 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 561.3746ms
+2023-11-29 18:18:08.228 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-29 18:18:08.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.2368ms
+2023-11-29 18:18:08.283 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.7830ms
+2023-11-29 18:18:08.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-29 18:18:08.659 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 179.3230ms
+2023-11-29 18:24:01.130 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-29 18:24:44.109 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-29 18:24:46.359 +05:30 [INF] Executed DbCommand (930ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-29 18:24:46.593 +05:30 [INF] Executed DbCommand (229ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-29 18:24:46.624 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-29 18:24:46.729 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-29 18:24:46.731 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-29 18:24:46.753 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-29 18:24:46.757 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-29 18:24:46.773 +05:30 [INF] Applying migration '20231129125401_Intial Migration'.
+2023-11-29 18:24:46.822 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Addresses] (
+    [AddressId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Addresses] PRIMARY KEY ([AddressId])
+);
+2023-11-29 18:24:46.824 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Bookings] (
+    [Id] datetime2 NOT NULL,
+    CONSTRAINT [PK_Bookings] PRIMARY KEY ([Id])
+);
+2023-11-29 18:24:46.825 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedicalRecordId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedicalRecordId])
+);
+2023-11-29 18:24:46.826 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([Id])
+);
+2023-11-29 18:24:46.828 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Doctors] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [Qualifications] nvarchar(max) NOT NULL,
+    [Specialization] nvarchar(max) NOT NULL,
+    [Hospital] nvarchar(max) NOT NULL,
+    [Fees] int NOT NULL,
+    [BookingId] datetime2 NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Doctors] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Doctors_Bookings_BookingId] FOREIGN KEY ([BookingId]) REFERENCES [Bookings] ([Id])
+);
+2023-11-29 18:24:47.057 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(max) NOT NULL,
+    [Age] int NOT NULL,
+    [DOB] datetime2 NOT NULL,
+    [AddressId] uniqueidentifier NOT NULL,
+    [MedicalRecordId] uniqueidentifier NULL,
+    [BookingId] datetime2 NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_Addresses_AddressId] FOREIGN KEY ([AddressId]) REFERENCES [Addresses] ([AddressId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Users_Bookings_BookingId] FOREIGN KEY ([BookingId]) REFERENCES [Bookings] ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordId] FOREIGN KEY ([MedicalRecordId]) REFERENCES [MedicalRecords] ([MedicalRecordId])
+);
+2023-11-29 18:24:47.066 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Medications] (
+    [MedicationsId] int NOT NULL IDENTITY,
+    [MedicineName] nvarchar(max) NOT NULL,
+    [Cost] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [AfterFood] bit NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Medications] PRIMARY KEY ([MedicationsId]),
+    CONSTRAINT [FK_Medications_Prescriptions_PrescriptionId] FOREIGN KEY ([PrescriptionId]) REFERENCES [Prescriptions] ([Id])
+);
+2023-11-29 18:24:48.978 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Observations] (
+    [Id] int NOT NULL IDENTITY,
+    [Symptoms] nvarchar(max) NULL,
+    [TreatmentPlan] nvarchar(max) NULL,
+    [Recommendedtests] nvarchar(max) NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Observations] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Observations_Prescriptions_PrescriptionId] FOREIGN KEY ([PrescriptionId]) REFERENCES [Prescriptions] ([Id])
+);
+2023-11-29 18:24:48.980 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Slots] (
+    [Id] uniqueidentifier NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [EndTime] datetime2 NOT NULL,
+    [TimeSpan] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_Slots] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Slots_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Slots_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-29 18:24:48.983 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [SlotId] uniqueidentifier NOT NULL,
+    [price] int NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [DoctorId] nvarchar(450) NULL,
+    [UserId] nvarchar(450) NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]),
+    CONSTRAINT [FK_Appts_Prescriptions_PrescriptionId] FOREIGN KEY ([PrescriptionId]) REFERENCES [Prescriptions] ([Id]),
+    CONSTRAINT [FK_Appts_Slots_SlotId] FOREIGN KEY ([SlotId]) REFERENCES [Slots] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2023-11-29 18:24:49.846 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_DoctorId] ON [Appts] ([DoctorId]);
+2023-11-29 18:24:49.846 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_PrescriptionId] ON [Appts] ([PrescriptionId]);
+2023-11-29 18:24:49.847 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_SlotId] ON [Appts] ([SlotId]);
+2023-11-29 18:24:49.848 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_UserId] ON [Appts] ([UserId]);
+2023-11-29 18:24:49.848 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Doctors_BookingId] ON [Doctors] ([BookingId]);
+2023-11-29 18:24:49.849 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Medications_PrescriptionId] ON [Medications] ([PrescriptionId]);
+2023-11-29 18:24:49.850 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Observations_PrescriptionId] ON [Observations] ([PrescriptionId]);
+2023-11-29 18:24:49.850 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Slots_DoctorId] ON [Slots] ([DoctorId]);
+2023-11-29 18:24:49.851 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Slots_UserId] ON [Slots] ([UserId]);
+2023-11-29 18:24:51.325 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_AddressId] ON [Users] ([AddressId]);
+2023-11-29 18:24:51.327 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_BookingId] ON [Users] ([BookingId]);
+2023-11-29 18:24:51.328 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_MedicalRecordId] ON [Users] ([MedicalRecordId]);
+2023-11-29 18:24:51.329 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231129125401_Intial Migration', N'6.0.25');

@@ -19,9 +19,11 @@ namespace Appointment.API.Repositories
             await dbContext.SaveChangesAsync();
             return user;
         }
-
-        public async Task<User?> DeleteAsync(Guid id)
+        //public async Task<User?> DeleteAsync(Guid id)
+        public async Task<User?> DeleteAsync(string id)
         {
+            
+            
             var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);  
             if (existingUser == null) { return null; }
 
@@ -36,34 +38,31 @@ namespace Appointment.API.Repositories
             return await dbContext.Users.ToListAsync();
         }
 
-        public async Task<User?> GetByIdAsync(Guid id)
+       //public async Task<User?> GetByIdAsync(Guid id)
+        public async Task<User?> GetByIdAsync(string id)
         {
             return await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<User?> UpdateAsync(Guid id, User user)
+        //public async Task<User?> UpdateAsync(Guid id, User user)
+        public async Task<User?> UpdateAsync(string id, User user)
         {
             var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
             if (existingUser == null) { return null; }
 
             existingUser.Id = id;
-            existingUser.Name = user.Name ==null?existingUser.Name:user.Name;
-            existingUser.Email = user.Email==null?existingUser.Email:user.Email;
-            existingUser.ContactNo = user.ContactNo == null ? existingUser.ContactNo : user.ContactNo;
-            existingUser.Password = user.Password == null ? existingUser.Password : user.Password;
-            existingUser.Weight = user.Weight == null ? existingUser.Weight : user.Weight;  
-            existingUser.ZipCode = user.ZipCode == null ? existingUser.ZipCode : user.ZipCode   ;
-            existingUser.Age = user.Age == null ? existingUser.Age : user.Age   ;
-            existingUser.BloodGrp = user.BloodGrp==null?existingUser.BloodGrp:user.BloodGrp;  
-            existingUser.City = user.City==null?existingUser.City:user.City;
-            existingUser.State = user.State == null ? existingUser.State : user.State;
-            existingUser.City = user.City == null ? existingUser.City : user.City;
-            existingUser.Height = user.Height == null ? existingUser.Height : user.Height;
-            existingUser.District = user.District == null ? existingUser.District : user.District;
-            
+            existingUser.UserName = user.UserName == null ? existingUser.UserName : user.UserName;
+            existingUser.Email = user.Email == null ? existingUser.Email : user.Email;
+            existingUser.PhoneNumber = user.PhoneNumber == null ? existingUser.PhoneNumber : user.PhoneNumber;
+            existingUser.PasswordHash = user.PasswordHash == null ? existingUser.PasswordHash : user.PasswordHash;
+
+            existingUser.Age = user.Age==0?existingUser.Age:user.Age;
+
+
 
             await dbContext.SaveChangesAsync();
             return existingUser;
+            
         }
     }
 }

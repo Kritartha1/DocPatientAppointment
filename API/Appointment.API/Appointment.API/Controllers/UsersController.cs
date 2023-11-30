@@ -5,6 +5,7 @@ using Appointment.API.Repositories;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -15,13 +16,15 @@ namespace Appointment.API.Controllers
     
     public class UsersController : ControllerBase
     {
+        private readonly UserManager<IdentityUser> userManager;
         private readonly AppointmentApiDbContext dbContext;
         private readonly IUserRepository userRepository;
         private readonly IMapper mapper;
         private readonly ILogger<UsersController> logger;
 
-        public UsersController(AppointmentApiDbContext dbContext,IUserRepository userRepository,IMapper mapper,ILogger<UsersController> logger)
+        public UsersController(UserManager<IdentityUser> userManager,AppointmentApiDbContext dbContext,IUserRepository userRepository,IMapper mapper,ILogger<UsersController> logger)
         {
+            this.userManager = userManager;
             this.dbContext = dbContext;
             this.userRepository = userRepository;
             this.mapper = mapper;
@@ -60,10 +63,38 @@ namespace Appointment.API.Controllers
         }
 
 
-        [HttpGet]
+        /*[HttpGet]
         [Route("{id:Guid}")]
         [Authorize(Roles = "User")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
+        {
+            var userDomain = await userRepository.GetByIdAsync(id);
+            if (userDomain == null)
+            {
+                return NotFound();
+            }
+
+            *//* var regionsDto = new List<RegionDto>();
+
+             var regionDto = new RegionDto
+             {
+                 Id = regionDomain.Id,
+                 Code = regionDomain.Code,
+                 Name = regionDomain.Name,
+                 RegionNameUrl = regionDomain.RegionNameUrl,
+             };*//*
+
+            var userDto = mapper.Map<UserDto>(userDomain);
+
+
+            return Ok(userDto);
+
+        }*/
+
+        [HttpGet]
+        [Route("{id}")]
+        [Authorize(Roles = "User,Doctor,Admin")]
+        public async Task<IActionResult> GetById([FromRoute] string id)
         {
             var userDomain = await userRepository.GetByIdAsync(id);
             if (userDomain == null)
@@ -88,85 +119,78 @@ namespace Appointment.API.Controllers
 
         }
 
-        [HttpPost]
-        [Authorize(Roles = "Doctor")]
 
-        public async Task<IActionResult> Create([FromBody] AddUserRequestDto addUserRequestDto)
-        {
-            /*var regionDomainModel = new Region
-            {
-                Code = addRegionRequestDto.Code,
-                Name = addRegionRequestDto.Name,
-                RegionNameUrl = addRegionRequestDto.RegionNameUrl,
-            };*/
-            var userDomainModel = mapper.Map<User>(addUserRequestDto);
+        /// ////////////////////////////////////////////////////////////////////////////////////   
 
-            userDomainModel = await userRepository.CreateAsync(userDomainModel);
+        /* [HttpPost]
+         [Authorize(Roles = "User")]
 
-            /*var regionDTO = new RegionDto
-            {
-                Id = regionDomainModel.Id,
-                Code = regionDomainModel.Code,
-                Name = regionDomainModel.Name,
-                RegionNameUrl = regionDomainModel.RegionNameUrl,
-            };*/
+         public async Task<IActionResult> Create([FromBody] AddUserRequestDto addUserRequestDto)
+         {
+             *//*var regionDomainModel = new Region
+             {
+                 Code = addRegionRequestDto.Code,
+                 Name = addRegionRequestDto.Name,
+                 RegionNameUrl = addRegionRequestDto.RegionNameUrl,
+             };*//*
+             var userDomainModel = mapper.Map<User>(addUserRequestDto);
 
-            var userDTO = mapper.Map<UserDto>(userDomainModel);
+             userDomainModel = await userRepository.CreateAsync(userDomainModel);
 
-            return CreatedAtAction(nameof(GetById), new { id = userDTO.Id }, userDTO);
-        }
+             *//*var regionDTO = new RegionDto
+             {
+                 Id = regionDomainModel.Id,
+                 Code = regionDomainModel.Code,
+                 Name = regionDomainModel.Name,
+                 RegionNameUrl = regionDomainModel.RegionNameUrl,
+             };*//*
+
+             var userDTO = mapper.Map<UserDto>(userDomainModel);
+
+             return CreatedAtAction(nameof(GetById), new { id = userDTO.Id }, userDTO);
+         }*/
+
+        /// ////////////////////////////////////////////////////////////////////////////////////  
+
 
         [HttpPut]
-        [Route("{id:Guid}")]
-        [Authorize(Roles = "Doctor")]
+        [Route("{id}")]
+        [Authorize(Roles = "User")]
 
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateUserRequestDto updateUserRequestDto)
+        public async Task<IActionResult> Update([FromRoute] string id, [FromBody] UpdateUserRequestDto updateUserRequestDto)
         {
-            /*var regionDomainModel = new Region
-            {
-                Code = updateRegionRequestDto.Code,
-                Name = updateRegionRequestDto.Name,
-                RegionNameUrl = updateRegionRequestDto.RegionNameUrl,
-            };*/
+          
             var userDomainModel = mapper.Map<User>(updateUserRequestDto);
-            userDomainModel = await userRepository.UpdateAsync(id,userDomainModel);
+            userDomainModel = await userRepository.UpdateAsync(id, userDomainModel);
 
             if (userDomainModel == null)
             {
                 return NotFound();
             }
-/*
-            userDomainModel.Code = updateUserRequestDto.Code;
-            userDomainModel.RegionNameUrl = updateUserRequestDto.RegionNameUrl;
-            userDomainModel.Name = updateUserRequestDto.Name;*/
 
-            await dbContext.SaveChangesAsync();
-
-            /* var regionDto = new RegionDto
-             {
-                 Id = regionDomainModel.Id,
-                 Code = regionDomainModel.Code,
-                 Name = regionDomainModel.Name,
-                 RegionNameUrl = regionDomainModel.RegionNameUrl
-             };*/
-            var userDto = mapper.Map<User>(userDomainModel);
+            
+            var userDto = mapper.Map<UserDto>(userDomainModel);
             return Ok(userDto);
 
         }
 
-        [HttpDelete]
-        [Route("{id:Guid}")]
-        [Authorize(Roles = "Doctor,User")]
+        /// ////////////////////////////////////////////////////////////////////////////////////  
 
-        public async Task<IActionResult> Delete([FromRoute] Guid id)
+       
+
+        [HttpDelete]
+        [Route("{id}")]
+        [Authorize(Roles = "Admin,User")]
+
+        public async Task<IActionResult> Delete([FromRoute] string id)
         {
-            var regionDomainModel = await userRepository.DeleteAsync(id);
-            if (regionDomainModel == null)
+            var userDomainModel = await userRepository.DeleteAsync(id);
+            if (userDomainModel == null)
             {
                 return NotFound();
             }
-
-
+            
+            await userManager.DeleteAsync(userDomainModel);
 
             /*var regionDto = new RegionDto
             {
@@ -176,7 +200,7 @@ namespace Appointment.API.Controllers
                 RegionNameUrl = regionDomainModel.RegionNameUrl
             };*/
 
-            var regionDto = mapper.Map<UserDto>(regionDomainModel);
+            var regionDto = mapper.Map<UserDto>(userDomainModel);
 
 
 

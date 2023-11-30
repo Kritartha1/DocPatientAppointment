@@ -66,11 +66,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("AppointmentConne
 );
 
 builder.Services.AddDbContext<AppointmentApiAuthDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("AppointmentAuthConnectionString"))
+options.UseSqlServer(builder.Configuration.GetConnectionString("AppointmentConnectionString"))
 );
 
 builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
 builder.Services.AddScoped<ITokenRepository,TokenRepository>();
+builder.Services.AddScoped<IAppointmentRepository,AppointmentRepository>();
+builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 builder.Services.AddIdentityCore<IdentityUser>().AddRoles<IdentityRole>()

@@ -1,16 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace Appointment.API.Models.Domain
 {
-    public class Doctor
+    public class Doctor:IdentityUser
     {
-        [Key]
-        public Guid Id { get; set; }
-        public string qualifications { get; set; }  
 
-        public string Hospital {  get; set; } 
-        
-       // public Guid[] ApptIds { get; set; }
-        public Appt[] Appts { get; set; }
+        public string Name { get; set; }
+        public string Qualifications { get; set; }
+        public string Specialization { get; set; }
+        public string Hospital { get; set; }
+      
+        public ICollection<Appt>? Appts { get; set; }
+
+
+        public int Fees { get; set; }    
+        //appointments can be either online or offline
+        //so make sure of that..
+
     }
 }

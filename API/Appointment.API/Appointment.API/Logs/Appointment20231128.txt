@@ -1,0 +1,1663 @@
+2023-11-28 09:35:37.353 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 09:35:37.728 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 09:35:37.729 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 09:35:37.735 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 09:35:37.737 +05:30 [INF] Hosting environment: Development
+2023-11-28 09:35:37.737 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 09:35:41.980 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 09:35:42.603 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 627.3788ms
+2023-11-28 09:35:42.604 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 09:35:42.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 12.6548ms
+2023-11-28 09:35:42.624 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 09:35:42.662 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.5909ms
+2023-11-28 09:35:42.873 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 09:35:43.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 192.2566ms
+2023-11-28 09:55:43.185 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 09:55:43.596 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 09:55:43.597 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 09:55:43.603 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 09:55:43.605 +05:30 [INF] Hosting environment: Development
+2023-11-28 09:55:43.606 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 09:55:44.944 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 09:55:45.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 544.2533ms
+2023-11-28 09:55:45.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 09:55:45.489 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 09:55:45.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 15.4721ms
+2023-11-28 09:55:45.513 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.6540ms
+2023-11-28 09:55:45.696 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 09:55:45.874 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 177.4423ms
+2023-11-28 09:57:16.515 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 09:57:16.524 +05:30 [INF] CORS policy execution successful.
+2023-11-28 09:57:17.284 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 09:57:17.335 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 09:57:19.019 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 09:57:20.716 +05:30 [INF] Executed DbCommand (91ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 09:57:21.010 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 09:57:21.075 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 09:57:21.096 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 3751.9424ms
+2023-11-28 09:57:21.099 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 09:57:21.110 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 4594.9676ms
+2023-11-28 09:58:01.613 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 09:58:01.703 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 09:58:01.707 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 09:58:01.717 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 09:58:02.059 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 09:58:02.076 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 09:58:02.212 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 09:58:02.235 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 09:58:02.251 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 542.4085ms
+2023-11-28 09:58:02.252 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 09:58:02.253 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 640.2763ms
+2023-11-28 09:58:36.933 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 09:58:36.946 +05:30 [INF] CORS policy execution successful.
+2023-11-28 09:58:36.960 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 09:58:36.965 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 09:58:37.007 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 09:58:37.254 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 09:58:37.322 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 09:58:37.348 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 09:58:37.380 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-11-28 09:58:37.400 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 433.9346ms
+2023-11-28 09:58:37.401 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 09:58:37.405 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-28 09:58:37.657 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 500 - text/plain;+charset=utf-8 724.0558ms
+2023-11-28 10:06:41.493 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:06:41.947 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:06:41.949 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:06:41.954 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:06:41.956 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:06:41.956 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:06:43.771 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:06:44.336 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:06:44.338 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:06:44.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 576.9297ms
+2023-11-28 10:06:44.347 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 10.6143ms
+2023-11-28 10:06:44.363 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.2388ms
+2023-11-28 10:06:44.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:06:44.614 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.6651ms
+2023-11-28 10:07:12.647 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:07:12.657 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:07:12.755 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:07:12.798 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:07:14.232 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:07:15.335 +05:30 [INF] Executed DbCommand (91ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:07:15.584 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:07:15.653 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:07:15.677 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 2869.2466ms
+2023-11-28 10:07:15.680 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:07:15.692 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 3045.0544ms
+2023-11-28 10:07:55.191 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:07:55.332 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:07:55.336 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:07:55.341 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:07:55.773 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:07:55.803 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:07:55.958 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:07:55.989 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:07:56.011 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 671.8109ms
+2023-11-28 10:07:56.019 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:07:56.023 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 831.9888ms
+2023-11-28 10:09:14.509 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:09:15.069 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:09:15.071 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:09:15.076 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:09:15.077 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:09:15.078 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:09:17.018 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:09:17.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:09:17.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:09:17.601 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 593.1596ms
+2023-11-28 10:09:17.607 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 10.3829ms
+2023-11-28 10:09:17.627 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.4984ms
+2023-11-28 10:09:17.706 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:09:17.892 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.6782ms
+2023-11-28 10:09:51.606 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:09:51.616 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:09:51.738 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:09:51.786 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:09:53.288 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:09:54.492 +05:30 [INF] Executed DbCommand (99ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:09:54.807 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:09:54.882 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:09:54.907 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 3110.2083ms
+2023-11-28 10:09:54.910 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:09:54.921 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 3314.8234ms
+2023-11-28 10:10:56.484 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:10:56.572 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:10:56.576 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:10:56.586 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:10:56.911 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:10:56.927 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:10:57.065 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:10:57.090 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:10:57.108 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 530.1681ms
+2023-11-28 10:10:57.110 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:10:57.111 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 627.2161ms
+2023-11-28 10:11:50.194 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:11:50.204 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:11:50.225 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:11:50.230 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:11:50.294 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:11:50.540 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:11:50.600 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:12:51.197 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:14:49.199 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:14:49.626 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:14:49.628 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:14:49.632 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:14:49.633 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:14:49.634 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:14:51.620 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:14:52.142 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 526.7593ms
+2023-11-28 10:14:52.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:14:52.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:14:52.161 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 15.9556ms
+2023-11-28 10:14:52.170 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.1512ms
+2023-11-28 10:14:52.237 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:14:52.417 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 180.4985ms
+2023-11-28 10:15:10.198 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:15:10.219 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:15:11.014 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:15:11.067 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:15:12.874 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:15:14.764 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:15:15.116 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:15:15.208 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:15:15.308 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 4224.3918ms
+2023-11-28 10:15:15.334 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:15:15.353 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 5154.8486ms
+2023-11-28 10:16:15.112 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:16:15.218 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:16:15.224 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:16:15.235 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:16:15.635 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:16:15.667 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:16:15.804 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Appt":[],"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:16:15.832 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:16:15.849 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 623.5024ms
+2023-11-28 10:16:15.851 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:16:15.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 742.5390ms
+2023-11-28 10:17:10.124 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:17:10.141 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:17:10.151 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:17:10.158 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:17:10.211 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:17:10.476 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:17:10.539 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:17:25.913 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:18:08.279 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-11-28 10:18:08.305 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 58143.8998ms
+2023-11-28 10:18:08.306 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:18:08.309 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.User.Appt.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-11-28 10:18:08.390 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 500 - text/plain;+charset=utf-8 58267.3954ms
+2023-11-28 10:27:42.929 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:27:43.410 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:27:43.412 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:27:43.420 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:27:43.421 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:27:43.422 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:27:45.378 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:27:46.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:27:46.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:27:46.082 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 8.1517ms
+2023-11-28 10:27:46.082 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 717.5251ms
+2023-11-28 10:27:46.104 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.3263ms
+2023-11-28 10:27:46.181 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:27:46.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.6630ms
+2023-11-28 10:28:26.835 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:28:26.846 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:28:27.672 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:28:27.717 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:28:29.432 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:28:31.337 +05:30 [INF] Executed DbCommand (108ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:28:31.789 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:28:31.898 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:28:31.955 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 4223.0093ms
+2023-11-28 10:28:31.960 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:28:31.978 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 5143.1425ms
+2023-11-28 10:29:24.328 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:29:24.409 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:29:24.413 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:29:24.423 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:29:24.727 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:29:24.747 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:29:24.891 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:29:24.919 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:29:24.935 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 519.893ms
+2023-11-28 10:29:24.937 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:29:24.938 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 609.9841ms
+2023-11-28 10:30:05.256 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:30:05.272 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:30:05.285 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:30:05.289 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:30:05.334 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:30:05.596 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:30:05.658 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:30:09.690 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:30:20.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-11-28 10:30:20.707 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 15415.8592ms
+2023-11-28 10:30:20.709 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:30:20.711 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 200 - application/json;+charset=utf-8 15454.1412ms
+2023-11-28 10:30:49.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:30:49.546 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:30:49.548 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:30:49.552 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:30:49.553 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:30:49.557 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:30:49.561 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:30:49.569 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:30:49.573 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 22.4896ms
+2023-11-28 10:30:49.576 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:30:49.578 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 35.5774ms
+2023-11-28 10:31:45.809 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:31:46.282 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:31:46.285 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:31:46.292 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:31:46.294 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:31:46.295 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:31:48.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:31:48.843 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:31:48.843 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:31:48.856 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 12.2698ms
+2023-11-28 10:31:48.856 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 582.2054ms
+2023-11-28 10:31:48.868 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.5801ms
+2023-11-28 10:31:48.937 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:31:49.121 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.6671ms
+2023-11-28 10:32:08.378 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:32:08.390 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:32:08.521 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:32:08.574 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:32:10.309 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:32:11.571 +05:30 [INF] Executed DbCommand (91ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:32:11.829 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:32:11.894 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:32:11.918 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 3333.4341ms
+2023-11-28 10:32:11.921 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:32:11.935 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 3557.0119ms
+2023-11-28 10:32:42.047 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:32:42.144 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:32:42.149 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:32:42.157 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:32:42.471 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:32:42.491 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:32:42.639 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:32:42.668 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:32:42.687 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 536.4897ms
+2023-11-28 10:32:42.694 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:32:42.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 649.3516ms
+2023-11-28 10:33:14.071 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:33:14.076 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:33:14.085 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:33:14.090 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:33:14.130 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:33:14.363 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:33:14.421 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:33:19.137 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:33:21.329 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.Domain.Appt, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:33:21.340 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 7247.6254ms
+2023-11-28 10:33:21.341 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:33:21.343 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 200 - application/json;+charset=utf-8 7272.6201ms
+2023-11-28 10:37:28.561 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:37:28.569 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:37:28.574 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:37:28.580 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:37:28.589 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:37:28.599 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:37:28.610 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:37:31.684 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:37:33.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.Domain.Appt, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:37:33.676 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 5087.9064ms
+2023-11-28 10:37:33.677 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:37:33.678 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 200 - application/json;+charset=utf-8 5116.4525ms
+2023-11-28 10:38:41.861 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:38:42.337 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:38:42.338 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:38:42.343 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:38:42.344 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:38:42.344 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:39:03.680 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-28 10:39:04.400 +05:30 [INF] Now listening on: https://localhost:7133
+2023-11-28 10:39:04.402 +05:30 [INF] Now listening on: http://localhost:5100
+2023-11-28 10:39:04.409 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-28 10:39:04.410 +05:30 [INF] Hosting environment: Development
+2023-11-28 10:39:04.412 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-11-28 10:39:06.764 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-11-28 10:39:07.287 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-11-28 10:39:07.292 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-11-28 10:39:07.305 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 16.3694ms
+2023-11-28 10:39:07.306 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 549.1131ms
+2023-11-28 10:39:07.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.0368ms
+2023-11-28 10:39:07.394 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-11-28 10:39:07.582 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.1893ms
+2023-11-28 10:39:28.520 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64
+2023-11-28 10:39:28.530 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:39:28.630 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:39:28.707 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-11-28 10:39:30.391 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:39:31.819 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-11-28 10:39:32.090 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-11-28 10:39:32.153 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-11-28 10:39:32.173 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 3457.5506ms
+2023-11-28 10:39:32.176 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-11-28 10:39:32.188 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 64 - 200 - application/json;+charset=utf-8 3667.4058ms
+2023-11-28 10:40:01.217 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-11-28 10:40:01.336 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:40:01.342 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-11-28 10:40:01.355 +05:30 [INF] GetAll users Action method was invoked
+2023-11-28 10:40:01.792 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:40:01.825 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+2023-11-28 10:40:01.969 +05:30 [INF] Finished GetAllUsers request with data:[{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"b597d33e-7b29-4623-9a9d-aad427487860","UserName":"userA@example.com","NormalizedUserName":"USERA@EXAMPLE.COM","Email":"userA@example.com","NormalizedEmail":"USERA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEMRJdD2kfx7heG0Lz\u002BgE0Ctm0dXQNu0dw3BNSXaTOCXtcyr2AgqlzEhtB35yDLnNFg==","SecurityStamp":"XCMHBSGXOS4A6JGNAYSS2EKYGUONZZHP","ConcurrencyStamp":"3b00aa08-92e4-4c6a-959d-c29b24d9c4f2","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"ContactNo":null,"City":null,"State":null,"District":null,"ZipCode":null,"Age":null,"Height":null,"Weight":null,"BloodGrp":null,"Type":0,"MedId":null,"MedicalRecord":null,"Id":"f734ccb8-d96f-4a49-a56c-6cb8f68e1cfa","UserName":"doctorA@example.com","NormalizedUserName":"DOCTORA@EXAMPLE.COM","Email":"doctorA@example.com","NormalizedEmail":"DOCTORA@EXAMPLE.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEKzKznasvFu2hx6VxHo7IfP5M8QmkQgcdldYFOFi42N3HvqH7H5Xo0VziwCBgeNpWA==","SecurityStamp":"MTW7KWNGRNEFGMBDCTF2CKNI5Z66OD5Y","ConcurrencyStamp":"a4377776-8e4f-480b-b11b-a468747eaf15","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-11-28 10:40:01.996 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:40:02.017 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 672.8436ms
+2023-11-28 10:40:02.020 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-11-28 10:40:02.021 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 804.3399ms
+2023-11-28 10:40:45.305 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Appointment application/json 252
+2023-11-28 10:40:45.313 +05:30 [INF] CORS policy execution successful.
+2023-11-28 10:40:45.332 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:40:45.339 +05:30 [INF] Route matched with {action = "Create", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddAppointmentRequestDto) on controller Appointment.API.Controllers.AppointmentController (Appointment.API).
+2023-11-28 10:40:45.390 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:40:45.656 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime2), @p6='?' (Size = 450), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Appts] ([Id], [Description], [DoctorId], [MedicalRecordMedId], [PrescriptionId], [StartTime], [UserId], [price])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2023-11-28 10:40:45.716 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:40:45.745 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Age], [u].[BloodGrp], [u].[City], [u].[ConcurrencyStamp], [u].[ContactNo], [u].[Discriminator], [u].[District], [u].[Email], [u].[EmailConfirmed], [u].[Height], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedId], [u].[MedicalRecordMedId], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[State], [u].[TwoFactorEnabled], [u].[Type], [u].[UserName], [u].[Weight], [u].[ZipCode], [u].[Hospital], [u].[qualifications]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-11-28 10:40:48.614 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.Domain.Appt, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-28 10:40:48.624 +05:30 [INF] Executed action Appointment.API.Controllers.AppointmentController.Create (Appointment.API) in 3283.3246ms
+2023-11-28 10:40:48.625 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AppointmentController.Create (Appointment.API)'
+2023-11-28 10:40:48.629 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Appointment application/json 252 - 200 - application/json;+charset=utf-8 3323.8026ms
+2023-11-28 10:45:14.054 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:45:45.782 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:45:53.874 +05:30 [INF] Executed DbCommand (7,260ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-28 10:45:55.210 +05:30 [INF] Executed DbCommand (1,330ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-28 10:45:55.285 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 10:45:56.179 +05:30 [INF] Executed DbCommand (800ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-28 10:45:56.181 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 10:45:56.205 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 10:45:56.209 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 10:45:56.227 +05:30 [INF] Applying migration '20231128051514_Intital Migration'.
+2023-11-28 10:45:56.279 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 10:45:56.280 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 10:45:56.282 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Discriminator] nvarchar(max) NOT NULL,
+    [qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 10:45:56.302 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 10:45:56.304 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(max) NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 10:45:56.306 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Medications] (
+    [MedicationsId] int NOT NULL IDENTITY,
+    [MedicationName] nvarchar(max) NOT NULL,
+    [Cost] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [DisId] uniqueidentifier NOT NULL,
+    [DiseaseDis_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Medications] PRIMARY KEY ([MedicationsId]),
+    CONSTRAINT [FK_Medications_Diseases_DiseaseDis_Id] FOREIGN KEY ([DiseaseDis_Id]) REFERENCES [Diseases] ([Dis_Id]) ON DELETE CASCADE
+);
+2023-11-28 10:45:58.585 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_MedicalRecordMedId] ON [Appts] ([MedicalRecordMedId]);
+2023-11-28 10:45:58.586 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_UserId] ON [Appts] ([UserId]);
+2023-11-28 10:45:58.587 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Diseases_PrescriptionP_Id] ON [Diseases] ([PrescriptionP_Id]);
+2023-11-28 10:45:58.588 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Medications_DiseaseDis_Id] ON [Medications] ([DiseaseDis_Id]);
+2023-11-28 10:45:58.918 +05:30 [INF] Executed DbCommand (330ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_MedicalRecordMedId] ON [Users] ([MedicalRecordMedId]);
+2023-11-28 10:45:58.920 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231128051514_Intital Migration', N'6.0.25');
+2023-11-28 10:50:58.552 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:51:11.146 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 10:51:12.588 +05:30 [INF] Executed DbCommand (910ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-28 10:51:12.861 +05:30 [INF] Executed DbCommand (265ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-28 10:51:12.900 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 10:51:13.037 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-28 10:51:13.042 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 10:51:13.063 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 10:51:13.068 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 10:51:13.086 +05:30 [INF] Applying migration '20231128052058_Intital Migration'.
+2023-11-28 10:51:13.143 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 10:51:13.152 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 10:51:13.156 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Discriminator] nvarchar(max) NOT NULL,
+    [qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 10:51:13.161 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 10:51:13.716 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(max) NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 10:51:13.718 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Medications] (
+    [MedicationsId] int NOT NULL IDENTITY,
+    [MedicationName] nvarchar(max) NOT NULL,
+    [Cost] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [DisId] uniqueidentifier NOT NULL,
+    [DiseaseDis_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Medications] PRIMARY KEY ([MedicationsId]),
+    CONSTRAINT [FK_Medications_Diseases_DiseaseDis_Id] FOREIGN KEY ([DiseaseDis_Id]) REFERENCES [Diseases] ([Dis_Id]) ON DELETE CASCADE
+);
+2023-11-28 10:51:13.719 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_MedicalRecordMedId] ON [Appts] ([MedicalRecordMedId]);
+2023-11-28 10:51:15.289 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_UserId] ON [Appts] ([UserId]);
+2023-11-28 10:51:15.298 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Diseases_PrescriptionP_Id] ON [Diseases] ([PrescriptionP_Id]);
+2023-11-28 10:51:15.299 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Medications_DiseaseDis_Id] ON [Medications] ([DiseaseDis_Id]);
+2023-11-28 10:51:15.300 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_MedicalRecordMedId] ON [Users] ([MedicalRecordMedId]);
+2023-11-28 10:51:15.301 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231128052058_Intital Migration', N'6.0.25');
+2023-11-28 11:26:42.685 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:26:50.978 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:26:51.488 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:26:51.525 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:26:51.529 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:26:51.530 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:26:51.551 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 11:26:51.572 +05:30 [INF] Applying migration '20231128055642_Intital Migration'.
+2023-11-28 11:26:51.654 +05:30 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 11:28:07.073 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:28:08.329 +05:30 [INF] Executed DbCommand (733ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-28 11:28:08.614 +05:30 [INF] Executed DbCommand (278ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-28 11:28:08.652 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:28:08.777 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-28 11:28:08.779 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:28:08.798 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:28:08.802 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 11:28:08.824 +05:30 [INF] Applying migration '20231128055642_Intital Migration'.
+2023-11-28 11:28:08.902 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 11:28:08.903 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 11:28:08.906 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Discriminator] nvarchar(max) NOT NULL,
+    [qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 11:28:09.102 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 11:28:09.110 +05:30 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 11:29:14.165 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:29:24.705 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:29:25.234 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:29:25.283 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:29:25.289 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:29:25.290 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:29:25.324 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 11:29:25.350 +05:30 [INF] Applying migration '20231128055914_Intital Migration'.
+2023-11-28 11:29:25.459 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 11:29:25.465 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 11:29:25.467 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Discriminator] nvarchar(max) NOT NULL,
+    [qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 11:29:25.522 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 11:29:25.531 +05:30 [ERR] Failed executing DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 11:31:43.856 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:31:45.636 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:31:45.688 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:31:45.724 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 11:31:54.616 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:32:05.791 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 11:32:06.790 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:32:06.846 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:32:06.851 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 11:32:06.852 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 11:32:06.890 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 11:32:06.914 +05:30 [INF] Applying migration '20231128060154_Intital Migration'.
+2023-11-28 11:32:07.143 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 11:32:07.146 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 11:32:07.148 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Discriminator] nvarchar(max) NOT NULL,
+    [qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 11:32:07.402 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 11:32:07.405 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(max) NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 11:32:07.407 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Medications] (
+    [MedicationsId] int NOT NULL IDENTITY,
+    [MedicationName] nvarchar(max) NOT NULL,
+    [Cost] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [DisId] uniqueidentifier NOT NULL,
+    [DiseaseDis_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Medications] PRIMARY KEY ([MedicationsId]),
+    CONSTRAINT [FK_Medications_Diseases_DiseaseDis_Id] FOREIGN KEY ([DiseaseDis_Id]) REFERENCES [Diseases] ([Dis_Id]) ON DELETE CASCADE
+);
+2023-11-28 11:32:07.408 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_MedicalRecordMedId] ON [Appts] ([MedicalRecordMedId]);
+2023-11-28 11:32:09.320 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_UserId] ON [Appts] ([UserId]);
+2023-11-28 11:32:09.321 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Diseases_PrescriptionP_Id] ON [Diseases] ([PrescriptionP_Id]);
+2023-11-28 11:32:09.321 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Medications_DiseaseDis_Id] ON [Medications] ([DiseaseDis_Id]);
+2023-11-28 11:32:09.322 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_MedicalRecordMedId] ON [Users] ([MedicalRecordMedId]);
+2023-11-28 11:32:09.324 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231128060154_Intital Migration', N'6.0.25');
+2023-11-28 12:12:54.639 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:13:17.374 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:13:18.869 +05:30 [INF] Executed DbCommand (887ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-28 12:13:19.123 +05:30 [INF] Executed DbCommand (248ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-28 12:13:19.155 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:13:19.255 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-28 12:13:19.257 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:13:19.277 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 12:13:19.281 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 12:13:19.300 +05:30 [INF] Applying migration '20231128064254_Intital Migration'.
+2023-11-28 12:13:19.348 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 12:13:19.349 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 12:13:19.351 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [UserId] nvarchar(max) NOT NULL,
+    [DoctorId] nvarchar(max) NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 12:13:19.353 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 12:13:19.688 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 12:13:19.691 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApptUser] (
+    [ApptId] uniqueidentifier NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_ApptUser] PRIMARY KEY ([ApptId], [UserId]),
+    CONSTRAINT [FK_ApptUser_Appts_ApptId] FOREIGN KEY ([ApptId]) REFERENCES [Appts] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ApptUser_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 12:13:19.724 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Medications] (
+    [MedicationsId] int NOT NULL IDENTITY,
+    [MedicationName] nvarchar(max) NOT NULL,
+    [Cost] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL,
+    [DisId] uniqueidentifier NOT NULL,
+    [DiseaseDis_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Medications] PRIMARY KEY ([MedicationsId]),
+    CONSTRAINT [FK_Medications_Diseases_DiseaseDis_Id] FOREIGN KEY ([DiseaseDis_Id]) REFERENCES [Diseases] ([Dis_Id]) ON DELETE CASCADE
+);
+2023-11-28 12:13:21.803 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appts_MedicalRecordMedId] ON [Appts] ([MedicalRecordMedId]);
+2023-11-28 12:13:21.804 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ApptUser_UserId] ON [ApptUser] ([UserId]);
+2023-11-28 12:13:21.804 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Diseases_PrescriptionP_Id] ON [Diseases] ([PrescriptionP_Id]);
+2023-11-28 12:13:21.808 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Medications_DiseaseDis_Id] ON [Medications] ([DiseaseDis_Id]);
+2023-11-28 12:13:21.809 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_MedicalRecordMedId] ON [Users] ([MedicalRecordMedId]);
+2023-11-28 12:13:21.810 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231128064254_Intital Migration', N'6.0.25');
+2023-11-28 12:52:39.509 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:52:54.691 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:52:56.611 +05:30 [INF] Executed DbCommand (774ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentApiDb];
+2023-11-28 12:52:56.896 +05:30 [INF] Executed DbCommand (274ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-11-28 12:52:57.039 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:52:57.140 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-11-28 12:52:57.142 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:52:57.161 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 12:52:57.167 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 12:52:57.183 +05:30 [INF] Applying migration '20231128072239_Intital Migration'.
+2023-11-28 12:52:57.231 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 12:52:57.233 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 12:52:57.235 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 12:52:57.612 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 12:52:57.619 +05:30 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 12:58:25.646 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:58:33.125 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:58:33.641 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:58:33.674 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 12:58:33.677 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 12:58:33.678 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 12:58:33.703 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 12:58:33.720 +05:30 [INF] Applying migration '20231128072825_Intital Migration'.
+2023-11-28 12:58:33.796 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 12:58:33.802 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 12:58:33.804 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 12:58:33.899 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 12:58:33.908 +05:30 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2023-11-28 12:59:30.921 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:59:46.612 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 12:59:59.089 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-11-28 13:00:00.001 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 13:00:00.033 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 13:00:00.036 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-28 13:00:00.037 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-28 13:00:00.056 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-28 13:00:00.072 +05:30 [INF] Applying migration '20231128072946_Intital Migration'.
+2023-11-28 13:00:00.145 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MedicalRecords] (
+    [MedId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_MedicalRecords] PRIMARY KEY ([MedId])
+);
+2023-11-28 13:00:00.147 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Prescriptions] (
+    [P_Id] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Prescriptions] PRIMARY KEY ([P_Id])
+);
+2023-11-28 13:00:00.149 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [ContactNo] nvarchar(10) NULL,
+    [City] nvarchar(max) NULL,
+    [State] nvarchar(max) NULL,
+    [District] nvarchar(max) NULL,
+    [ZipCode] nvarchar(max) NULL,
+    [Age] int NULL,
+    [Height] real NULL,
+    [Weight] real NULL,
+    [BloodGrp] nvarchar(max) NULL,
+    [Type] int NOT NULL,
+    [MedId] uniqueidentifier NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [UserName] nvarchar(max) NULL,
+    [NormalizedUserName] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [NormalizedEmail] nvarchar(max) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId])
+);
+2023-11-28 13:00:00.155 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Diseases] (
+    [Dis_Id] uniqueidentifier NOT NULL,
+    [Dis_Name] nvarchar(max) NOT NULL,
+    [PrescriptionP_Id] uniqueidentifier NULL,
+    CONSTRAINT [PK_Diseases] PRIMARY KEY ([Dis_Id]),
+    CONSTRAINT [FK_Diseases_Prescriptions_PrescriptionP_Id] FOREIGN KEY ([PrescriptionP_Id]) REFERENCES [Prescriptions] ([P_Id])
+);
+2023-11-28 13:00:00.641 +05:30 [ERR] Failed executing DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appts] (
+    [UserId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    [Id] uniqueidentifier NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [StartTime] datetime2 NOT NULL,
+    [price] int NOT NULL,
+    [PrescriptionId] uniqueidentifier NULL,
+    [Qualifications] nvarchar(max) NULL,
+    [Hospital] nvarchar(max) NULL,
+    [MedicalRecordMedId] uniqueidentifier NULL,
+    CONSTRAINT [PK_Appts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appts_MedicalRecords_MedicalRecordMedId] FOREIGN KEY ([MedicalRecordMedId]) REFERENCES [MedicalRecords] ([MedId]),
+    CONSTRAINT [FK_Appts_Users_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appts_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);

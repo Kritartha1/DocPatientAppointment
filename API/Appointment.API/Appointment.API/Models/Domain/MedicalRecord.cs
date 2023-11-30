@@ -5,10 +5,12 @@ namespace Appointment.API.Models.Domain
     public class MedicalRecord
     {
         [Key]
-        public Guid MedId { get; set; }
+        public Guid MedicalRecordId { get; set; }
         
        // public Guid[]? ApptIds { get; set; }
-        public Appt[] Appts { get; set; }
+       public ICollection<Observation>? Observations { get; set; }   
+
+        
 
     }
 }
