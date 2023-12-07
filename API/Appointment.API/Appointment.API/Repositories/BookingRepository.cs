@@ -1,5 +1,6 @@
 ﻿using Appointment.API.Data;
 using Appointment.API.Models.Domain;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
@@ -15,6 +16,8 @@ namespace Appointment.API.Repositories
         }
         public async Task<Booking> CreateAsync(Booking booking)
         {
+
+           
             await dbContext.Bookings.AddAsync(booking);
             await dbContext.SaveChangesAsync();
             return booking;
@@ -22,7 +25,7 @@ namespace Appointment.API.Repositories
 
         public async Task<Booking?> DeleteAsync(DateTime id)
         {
-            var existingBooking = await dbContext.Bookings.FirstOrDefaultAsync(x =>x.Id== id);
+            var existingBooking = await dbContext.Bookings.FirstOrDefaultAsync(x =>x.BookingId.Equals(id));
             if (existingBooking == null) { return null; }
 
             dbContext.Bookings.Remove(existingBooking);
@@ -32,22 +35,24 @@ namespace Appointment.API.Repositories
 
         public async Task<List<Booking>> GetAllAsync()
         {
-            return await dbContext.Bookings.ToListAsync();
+            return await dbContext.Bookings.Include(a=>a.Users).Include(a=>a.Doctors).ToListAsync();
         }
 
         public async Task<Booking?> GetByIdAsync(DateTime id)
         {
-            return await dbContext.Bookings.FirstOrDefaultAsync(x => x.Id == id);
+            return await dbContext.Bookings.Include(a => a.Users).Include(a => a.Doctors).FirstOrDefaultAsync(x => x.BookingId.Equals(id));
         }
 
         public async Task<Booking?> UpdateAsync(DateTime id, Booking booking)
         {
-            var existingBooking = await dbContext.Bookings.FirstOrDefaultAsync(x => x.Id == id);
+            var existingBooking = await dbContext.Bookings.Include(a => a.Users).Include(a => a.Doctors).FirstOrDefaultAsync(x => x.BookingId == id);
             if (existingBooking == null) { return null; }
 
-            existingBooking.Id = id;
-            existingBooking.User =booking.User;
-            existingBooking.Doctor = booking.Doctor;
+            //existingBooking.BookingId = id;
+            existingBooking.Users =booking.Users.ToList();
+            existingBooking.Doctors = booking.Doctors.ToList();
+            
+            
 
             await dbContext.SaveChangesAsync();
             return existingBooking;

@@ -35,6 +35,14 @@ namespace Appointment.API.Repositories
             return await dbContext.Appts.ToListAsync();
         }
 
+       /* public async Task<List<Appt>> GetAllApptsAsync(string id)
+        {
+            var userDomainModel= await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+            ICollection<Appt>? appts = userDomainModel.Appts;
+            return appts.ToList();
+            *//*return await dbContext.Appts.ToListAsync();*//*
+        }*/
+
         public async Task<Appt?> GetByIdAsync(Guid id)
         {
             return await dbContext.Appts.FirstOrDefaultAsync(x => x.Id == id);

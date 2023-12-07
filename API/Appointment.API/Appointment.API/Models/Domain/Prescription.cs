@@ -7,6 +7,8 @@ namespace Appointment.API.Models.Domain
         [Key]
         public Guid Id { get; set; }
        // public Guid[] Dis_Id {  get; set; } 
+
+
         public ICollection<Medication> Medications { get; set; } 
 
 

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Appointment.API.Models.Domain
 {
@@ -6,9 +7,11 @@ namespace Appointment.API.Models.Domain
     {
         [Key]
         public Guid MedicalRecordId { get; set; }
-        
-       // public Guid[]? ApptIds { get; set; }
-       public ICollection<Observation>? Observations { get; set; }   
+
+        // public Guid[]? ApptIds { get; set; }
+
+        [JsonIgnore]
+        public ICollection<Observation>? Observations { get; set; }   
 
         
 

@@ -30,7 +30,7 @@ namespace Appointment.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles ="User,Admin")]
+       /* [Authorize(Roles ="User,Admin")]*/
         public async Task<IActionResult> GetAll()
         {
           //  logger.LogInformation("GetAll doctors Action method was invoked");
@@ -52,7 +52,7 @@ namespace Appointment.API.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        [Authorize(Roles = "User,Doctor,Admin")]
+        /*[Authorize(Roles = "User,Doctor,Admin")]*/
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
             var doctorDomain = await doctorRepository.GetByIdAsync(id);
@@ -87,7 +87,7 @@ namespace Appointment.API.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        [Authorize(Roles = "Admin")]
+        /*[Authorize(Roles = "Admin")]*/
 
         public async Task<IActionResult> Update([FromRoute] string id, [FromBody] UpdateDoctorRequestDto updateDoctorRequestDto)
         {
@@ -105,7 +105,7 @@ namespace Appointment.API.Controllers
 
             await dbContext.SaveChangesAsync();
 
-            var doctorDto = mapper.Map<UserDto>(doctorDomainModel);
+            var doctorDto = mapper.Map<DoctorDto>(doctorDomainModel);
             return Ok(doctorDto);
 
         }
@@ -114,7 +114,7 @@ namespace Appointment.API.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        [Authorize(Roles = "Admin")]
+       /* [Authorize(Roles = "Admin")]*/
 
         public async Task<IActionResult> Delete([FromRoute] string id)
         {

@@ -24,7 +24,7 @@ namespace Appointment.API.Repositories
         {
             
             
-            var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);  
+            var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Id.Equals(id));  
             if (existingUser == null) { return null; }
 
             dbContext.Users.Remove(existingUser);
@@ -41,13 +41,15 @@ namespace Appointment.API.Repositories
        //public async Task<User?> GetByIdAsync(Guid id)
         public async Task<User?> GetByIdAsync(string id)
         {
-            return await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+            //return await dbContext.Users.FirstOrDefaultAsync(x => x.Id.Trim().Equals(id, StringComparison.OrdinalIgnoreCase));
+            return await dbContext.Users.FirstOrDefaultAsync(x => (x.Id).Equals(id));
+           
         }
 
         //public async Task<User?> UpdateAsync(Guid id, User user)
         public async Task<User?> UpdateAsync(string id, User user)
         {
-            var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+            var existingUser = await dbContext.Users.FirstOrDefaultAsync(x => (x.Id).Equals(id));
             if (existingUser == null) { return null; }
 
             existingUser.Id = id;
@@ -57,6 +59,9 @@ namespace Appointment.API.Repositories
             existingUser.PasswordHash = user.PasswordHash == null ? existingUser.PasswordHash : user.PasswordHash;
 
             existingUser.Age = user.Age==0?existingUser.Age:user.Age;
+            existingUser.Appts=user.Appts==null?null:user.Appts.ToList();
+            
+
 
 
 

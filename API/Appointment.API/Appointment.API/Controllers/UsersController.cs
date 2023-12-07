@@ -93,9 +93,10 @@ namespace Appointment.API.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        [Authorize(Roles = "User,Doctor,Admin")]
+       /* [Authorize(Roles = "User,Doctor,Admin")]*/
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
+            
             var userDomain = await userRepository.GetByIdAsync(id);
             if (userDomain == null)
             {
@@ -201,8 +202,6 @@ namespace Appointment.API.Controllers
             };*/
 
             var regionDto = mapper.Map<UserDto>(userDomainModel);
-
-
 
             return Ok(regionDto);
         }

@@ -8,13 +8,16 @@ namespace Appointment.API.Repositories
     public class SlotRepository : ISlotRepository
     {
         private readonly AppointmentApiDbContext dbContext;
+        private readonly IBookingRepository bookingRepository;
 
-        public SlotRepository(AppointmentApiDbContext dbContext)
+        public SlotRepository(AppointmentApiDbContext dbContext,IBookingRepository bookingRepository)
         {
             this.dbContext = dbContext;
+            this.bookingRepository = bookingRepository;
         }
         public async Task<Slot> CreateAsync(Slot slot)
         {
+           
             await dbContext.Slots.AddAsync(slot);
             await dbContext.SaveChangesAsync();
             return slot;
@@ -24,6 +27,13 @@ namespace Appointment.API.Repositories
         {
             var existingSlot = await dbContext.Slots.FirstOrDefaultAsync(x => x.Id == id);
             if (existingSlot == null) { return null; }
+
+            var bookingDomainModel =await bookingRepository.GetByIdAsync(existingSlot.StartTime);
+           
+            bookingDomainModel.Users.Remove(existingSlot.User);
+            bookingDomainModel.Doctors.Remove(existingSlot.Doctor);
+
+
 
             dbContext.Slots.Remove(existingSlot);
             await dbContext.SaveChangesAsync();

@@ -7,9 +7,9 @@ namespace Appointment.API.Models.Domain
         [Key]
         public Guid AddressId { get; set; }
 
-        public string Locality;
-        public string City;
-        public string State;
+        public string Locality { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
 
 
     }

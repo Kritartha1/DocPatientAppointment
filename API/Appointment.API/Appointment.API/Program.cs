@@ -73,6 +73,14 @@ builder.Services.AddScoped<IUserRepository,SQLUserRepository>();
 builder.Services.AddScoped<ITokenRepository,TokenRepository>();
 builder.Services.AddScoped<IAppointmentRepository,AppointmentRepository>();
 builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<ISlotRepository, SlotRepository>();
+builder.Services.AddScoped<IObservationRepository, ObservationRepository>();
+builder.Services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
+builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
+builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 builder.Services.AddIdentityCore<IdentityUser>().AddRoles<IdentityRole>()

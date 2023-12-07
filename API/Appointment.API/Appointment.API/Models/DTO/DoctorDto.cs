@@ -19,7 +19,6 @@ namespace Appointment.API.Models.DTO
 
         public ICollection<Appt>? Appts { get; set; }
 
-
         public int Fees { get; set; }
     }
 }

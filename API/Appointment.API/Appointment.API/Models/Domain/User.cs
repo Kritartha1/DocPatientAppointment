@@ -21,10 +21,16 @@ namespace Appointment.API.Models.Domain
         public Guid? MedicalRecordId { get; set; }
        
         public MedicalRecord? MedicalRecord { get; set; }
-        public ICollection<Appt>? Appts { get; set; }
-          
 
-        
+        [JsonIgnore]
+        public ICollection<Appt>? Appts { get; set; }
+
+        [JsonIgnore]
+        public ICollection<Booking>? Bookings { get; set; }
+
+
+
+
 
 
 

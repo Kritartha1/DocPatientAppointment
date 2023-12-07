@@ -16,6 +16,10 @@ namespace Appointment.API.Mappings
             CreateMap<Doctor, DoctorDto>().ReverseMap();
             CreateMap<AddDoctorRequestDto, Doctor>().ReverseMap();
             CreateMap<UpdateDoctorRequestDto, Doctor>().ReverseMap();
+            CreateMap<AddSlotRequestDto, Slot>().ReverseMap();
+            CreateMap<Slot, SlotDto>().ReverseMap();
+            CreateMap<AddbookingRequestDto, Booking>().ReverseMap();
+            CreateMap<BookingDto, Booking>().ReverseMap();
         }
     }
 }

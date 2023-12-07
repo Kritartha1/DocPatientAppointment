@@ -8,24 +8,17 @@ namespace Appointment.API.Models.DTO
 
         public string Description { get; set; }
 
+        public Guid SlotId { get; set; }
+        public Slot? Slot { get; set; }
 
 
-        public DateTime StartTime { get; set; }
+        // public int duration { get; private set; } = 30;
         // public DateTime EndTime { get; private set; }
 
-        public int price { get; set; } = 500;
-
-        public string[] UserId { get; set; }
-      /*  public string DoctorId { get; set; } = "Just for testing";*/
+        public int price { get; set; }
 
         public Guid? PrescriptionId { get; set; }
 
-        /*public User User { get; set; }  
-        public Doctor Doctor { get; set; }*/
-
-
-       /* public User[] Users { get; set; } //Doctor + User
-                                          // public User Doctor { get; set; }*/
-        public Prescription Prescription { get; set; }=new Prescription();
+        public Prescription? Prescription { get; set; }
     }
 }
