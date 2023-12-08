@@ -1,0 +1,11 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.btn-black {
+    background-color: black;
+    color: white; /* Optional: Change text color for better visibility */
+  }
+
+  .btn-clicked {
+    background-color: black; /* Change this to the desired color */
+    color: white; /* Change this to the desired text color */
+  }

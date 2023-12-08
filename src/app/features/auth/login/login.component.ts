@@ -1,0 +1,41 @@
+import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginRequest } from '../models/login-request';
+import { AuthService } from '../services/auth.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+  model: LoginRequest;
+
+  constructor(private authService: AuthService, private cookieService: CookieService, private router: Router) {
+    this.model = {
+      email: '',
+      password: ''
+    };
+  }
+
+  onFormSubmit(): void {
+    this.authService.login(this.model)
+      .subscribe({
+        next: (response) => {
+          //Set auth cookie
+          // console.log(response);
+          this.cookieService.set('Authorization', `Bearer ${response.jwtToken}`, undefined, '/', undefined, true, 'Strict');
+
+          //set user
+          this.authService.setuser({
+            email: response.email,
+            roles: response.roles,
+            id: response.id
+          })
+          this.router.navigateByUrl('/');
+        }
+      });
+  }
+
+}

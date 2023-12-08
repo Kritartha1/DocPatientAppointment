@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="mt-3">Doctors list</h1>
+
+  <div class="d-flex justify-content-end mt-3">
+    <a [routerLink]="['/admin/add-doctor']" class="btn btn-primary"
+      >Add doctor</a
+    >
+  </div>
+
+  <ng-container *ngIf="doctors$ | async as doctors">
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Qualifications</th>
+          <th>Specialization</th>
+          <th>Hospital</th>
+          <th>Fees</th>
+          <th>Appointments</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let doctor of doctors">
+          <td>{{ doctor.id }}</td>
+          <td>{{ doctor.name }}</td>
+          <td>{{ doctor.userName }}</td>
+          <td>{{ doctor.email }}</td>
+          <td>{{ doctor.qualifications }}</td>
+          <td>{{ doctor.specialization }}</td>
+          <td>{{ doctor.hospital }}</td>
+          <td>{{ doctor.fees }}</td>
+          <td>{{ doctor.appts }}</td>
+          <td>
+            <a
+              class="btn btn-light"
+              [routerLink]="['/admin/doctors', doctor.id]"
+              >Edit</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>

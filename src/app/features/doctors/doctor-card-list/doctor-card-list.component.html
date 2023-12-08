@@ -1,0 +1,32 @@
+<div class="container" style="display:flex;flex-wrap: wrap;overflow: scroll;">
+    
+  
+    <ng-container *ngIf="doctors$ | async as doctors" >
+        
+           
+          
+          
+            <a *ngFor="let doctor of doctors" class="card mt-4 grow card-link"  style="width: 18rem;margin-left: 1em;text-decoration: none;" [routerLink]="['/slots', doctor.id]" >
+                <img src="https://medicaldialogues.in/h-upload/2021/10/21/162477-doctor-dressing-gown-stethoscope-face-vector-illustration-120556906.webp" class="card-img-top" alt="Skyscrapers"/>
+                <div class="card-body ">
+                  <h5 class="card-title">{{ doctor.name }}</h5>
+                  <p>Qualifications: {{ doctor.qualifications }}</p>
+                  <p>Specilaization: {{ doctor.specialization }}</p>
+                  <p>{{ doctor.hospital }}</p>
+                  <p>Fee: {{ doctor.fees }}</p>
+                  
+                  <!-- <a
+                  class="btn btn-light"
+                  [routerLink]="['/admin/doctors', doctor.id]"
+                  >Book slot</a
+                > -->
+                </div>
+                
+            </a>
+            
+            
+        
+     
+    </ng-container>
+  </div>
+  
