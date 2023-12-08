@@ -262,7 +262,10 @@ namespace Appointment.API.Controllers
                         var jwtToken = tokenRepository.CreateJWTToken(user, roles.ToList());
                         var response = new LoginResponseDto
                         {
-                            JwtToken = jwtToken
+                            Email = loginRequestDto.Username,
+                            Roles = roles.ToList(),
+                            JwtToken = jwtToken,
+                            Id=user.Id
                         };
                         return Ok(response);
 
