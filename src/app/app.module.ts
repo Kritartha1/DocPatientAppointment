@@ -20,6 +20,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BookSlotComponent } from './features/slots/book-slot/book-slot.component';
 import { LoginComponent } from './features/auth/login/login.component';
+import { AddAppointmentComponent } from './features/bookings/add-appointment/add-appointment.component';
+import { BookedAppointmentComponent } from './features/bookings/booked-appointment/booked-appointment.component';
+import { HomePageComponent } from './core/components/home-page/home-page.component';
+
+import { UserProfileComponent } from './features/User/user-profile/user-profile.component';
+import { UpdateUserComponent } from './features/User/update-user/update-user.component';
+import { UpdateAddressComponent } from './features/User/update-address/update-address.component';
+import { UserAppointmentsComponent } from './features/User/user-appointments/user-appointments.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,15 @@ import { LoginComponent } from './features/auth/login/login.component';
     DoctorCardListComponent,
     DoctorCardComponent,
     BookSlotComponent,
-    LoginComponent
+    LoginComponent,
+    AddAppointmentComponent,
+    BookedAppointmentComponent,
+    HomePageComponent,
+
+    UserProfileComponent,
+     UpdateUserComponent,
+     UpdateAddressComponent,
+     UserAppointmentsComponent
   ],
   imports: [
     BrowserModule,

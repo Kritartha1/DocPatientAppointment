@@ -8,6 +8,11 @@ import { DoctorCardComponent } from './features/doctors/doctor-card/doctor-card.
 import { BookSlotComponent } from './features/slots/book-slot/book-slot.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { authGuard } from './features/auth/guard/auth.guard';
+import { AddAppointmentComponent } from './features/bookings/add-appointment/add-appointment.component';
+import { BookedAppointmentComponent } from './features/bookings/booked-appointment/booked-appointment.component';
+import { HomePageComponent } from './core/components/home-page/home-page.component';
+import { UserProfileComponent } from './features/User/user-profile/user-profile.component';
+import { UserAppointmentsComponent } from './features/User/user-appointments/user-appointments.component';
 
 
 
@@ -35,6 +40,10 @@ const routes: Routes = [
     path: 'doctors',
     component: DoctorCardListComponent
   },
+  {
+    path: 'my-slots',
+    component: UserAppointmentsComponent
+  },
   // {
   //   path: 'doctors',
   //   component: DoctorCardComponent
@@ -45,6 +54,21 @@ const routes: Routes = [
   }, {
     path: 'slots/SlotBooked',
     component: BookSlotComponent
+  },
+  {
+    path: 'slots/SlotBooked/pay',
+    component: AddAppointmentComponent
+  }, {
+    path: 'slots/SlotBooked/pay/booked',
+    component: BookedAppointmentComponent
+
+  }, {
+    path: '',
+    component: HomePageComponent
+  },
+  {
+    path: 'profile',
+    component: UserProfileComponent
   }
 
 ];

@@ -70,9 +70,9 @@
             
           </ng-container>
           <ng-template #showLogout>
-            <li><a class="dropdown-item" href="#">{{user?.email}}</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/profile']" >{{user?.email}}</a></li>
             <li><a class="dropdown-item" href="#">Medical Records</a></li>
-            <li><a class="dropdown-item" href="#">Appointments</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/my-slots']">Appointments</a></li>
             <li><a class="dropdown-item" (click)="onLogout()">Log Out</a></li>
           </ng-template>
           

@@ -137,7 +137,8 @@ export class DoctorCardComponent implements OnInit {
           {
             next: (response) => {
               console.log(this.router);
-              this.router.navigateByUrl('/');
+              // this.router.navigateByUrl('/');
+              this.router.navigateByUrl('/slots/SlotBooked/pay');
               alert("Slot booking was successful!");
 
             },

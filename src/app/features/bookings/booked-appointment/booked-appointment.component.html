@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-body mx-4">
+      <div class="container">
+        <p class="my-5 mx-5" style="font-size: 30px;">Thank you for your Booking</p>
+        <div class="row">
+          <ul class="list-unstyled">
+            <li class="text-black">John Doe</li>
+            <li class="text-muted mt-1"><span class="text-black">Invoice</span> #12345</li>
+            <li class="text-black mt-1">April 17 2021</li>
+          </ul>
+          <hr>
+          <div class="col-xl-10">
+            <p>Pro Package</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end">$199.00
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Consulting</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end">$100.00
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Support</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end">$10.00
+            </p>
+          </div>
+          <hr style="border: 2px solid black;">
+        </div>
+        <div class="row text-black">
+  
+          <div class="col-xl-12">
+            <p class="float-end fw-bold">Total: $10.00
+            </p>
+          </div>
+          <hr style="border: 2px solid black;">
+        </div>
+        <div class="text-center" style="margin-top: 90px;">
+            <a class="btn btn-light text-capitalize border-0" (click)="printInvoice()" data-mdb-ripple-color="dark"><i
+                class="fas fa-print text-primary"></i> Print</a>
+            <a class="btn btn-light text-capitalize border-0" (click)="logout()" data-mdb-ripple-color="dark"><i
+                class="fas fa-print text-primary"></i> log out</a>
+
+          <!-- authService.logout(); -->
+        </div>
+  
+      </div>
+    </div>
+  </div>

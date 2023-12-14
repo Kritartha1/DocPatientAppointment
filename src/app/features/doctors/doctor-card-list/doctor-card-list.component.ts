@@ -13,7 +13,7 @@ export class DoctorCardListComponent implements OnInit {
 
   // doctors?: Doctor[];
   doctors$?: Observable<Doctor[]>;
-  startDate: Date = new Date();
+
   constructor(private doctorService: DoctorService) {
 
   }
