@@ -3597,7 +3597,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2000108446\\.nuget\\packages\\": {},
+    "C:\\Users\\2000108446.CORP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -3605,11 +3605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2000108446\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\Appointment.API.csproj",
+      "projectUniqueName": "C:\\Users\\2000108446.CORP\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\Appointment.API.csproj",
       "projectName": "Appointment.API",
-      "projectPath": "C:\\Users\\2000108446\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\Appointment.API.csproj",
-      "packagesPath": "C:\\Users\\2000108446\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2000108446\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\obj\\",
+      "projectPath": "C:\\Users\\2000108446.CORP\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\Appointment.API.csproj",
+      "packagesPath": "C:\\Users\\2000108446.CORP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\2000108446.CORP\\source\\repos\\Proj\\API\\Appointment.API\\Appointment.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -3617,7 +3617,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\2000108446\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\2000108446.CORP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

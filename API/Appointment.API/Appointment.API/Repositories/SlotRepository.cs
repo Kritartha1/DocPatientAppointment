@@ -47,7 +47,7 @@ namespace Appointment.API.Repositories
 
         public async Task<Slot?> GetByIdAsync(Guid id)
         {
-            return await dbContext.Slots.FirstOrDefaultAsync(x => x.Id == id);
+            return await dbContext.Slots.Include(a=>a.Doctor).FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Slot?> UpdateAsync(Guid id, Slot slot)

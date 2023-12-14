@@ -42,7 +42,7 @@ namespace Appointment.API.Repositories
         public async Task<User?> GetByIdAsync(string id)
         {
             //return await dbContext.Users.FirstOrDefaultAsync(x => x.Id.Trim().Equals(id, StringComparison.OrdinalIgnoreCase));
-            return await dbContext.Users.FirstOrDefaultAsync(x => (x.Id).Equals(id));
+            return await dbContext.Users.Include(a=>a.Slots).FirstOrDefaultAsync(x => (x.Id).Equals(id));
            
         }
 
@@ -57,14 +57,12 @@ namespace Appointment.API.Repositories
             existingUser.Email = user.Email == null ? existingUser.Email : user.Email;
             existingUser.PhoneNumber = user.PhoneNumber == null ? existingUser.PhoneNumber : user.PhoneNumber;
             existingUser.PasswordHash = user.PasswordHash == null ? existingUser.PasswordHash : user.PasswordHash;
+            existingUser.Name=user.Name == null ? existingUser.Name : user.Name;
 
             existingUser.Age = user.Age==0?existingUser.Age:user.Age;
             existingUser.Appts=user.Appts==null?null:user.Appts.ToList();
             
-
-
-
-
+            
             await dbContext.SaveChangesAsync();
             return existingUser;
             

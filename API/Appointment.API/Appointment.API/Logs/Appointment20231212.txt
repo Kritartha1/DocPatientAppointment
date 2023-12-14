@@ -1,0 +1,791 @@
+2023-12-12 09:47:56.665 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 09:47:57.009 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 09:47:57.010 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 09:47:57.015 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 09:47:57.016 +05:30 [INF] Hosting environment: Development
+2023-12-12 09:47:57.017 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 09:48:00.418 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 09:48:00.968 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 09:48:00.968 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 557.6444ms
+2023-12-12 09:48:00.972 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 09:48:00.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 10.7797ms
+2023-12-12 09:48:01.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.7509ms
+2023-12-12 09:48:01.114 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 09:48:01.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 158.0281ms
+2023-12-12 09:53:14.648 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 09:53:14.662 +05:30 [INF] CORS policy execution successful.
+2023-12-12 09:53:14.849 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 09:53:14.889 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 09:53:16.580 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 09:53:18.367 +05:30 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 09:53:18.585 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 09:53:18.638 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 3741.7079ms
+2023-12-12 09:53:18.642 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 09:53:18.654 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 4006.3604ms
+2023-12-12 09:57:20.974 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - -
+2023-12-12 09:57:20.978 +05:30 [INF] CORS policy execution successful.
+2023-12-12 09:57:20.981 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - - - 204 - - 6.5716ms
+2023-12-12 09:57:20.986 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53
+2023-12-12 09:57:20.989 +05:30 [INF] CORS policy execution successful.
+2023-12-12 09:57:20.990 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 09:57:21.011 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-12-12 09:57:21.263 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 09:57:21.617 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-12 09:57:21.833 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-12-12 09:57:21.885 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-12-12 09:57:21.890 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 875.6ms
+2023-12-12 09:57:21.891 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 09:57:21.892 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53 - 200 - application/json;+charset=utf-8 905.9960ms
+2023-12-12 10:21:04.125 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - -
+2023-12-12 10:21:04.127 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:21:04.128 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - - - 204 - - 3.0937ms
+2023-12-12 10:21:04.129 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53
+2023-12-12 10:21:04.130 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:21:04.133 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 10:21:04.134 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-12-12 10:21:04.200 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 10:21:04.475 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-12 10:21:04.485 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-12-12 10:21:04.487 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-12-12 10:21:04.489 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 353.5461ms
+2023-12-12 10:21:04.490 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 10:21:04.491 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53 - 200 - application/json;+charset=utf-8 361.5648ms
+2023-12-12 10:31:34.506 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 10:31:34.508 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:31:34.509 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 10:31:34.510 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 10:31:34.513 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 10:31:34.984 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 10:31:34.989 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 10:31:34.991 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 478.5176ms
+2023-12-12 10:31:34.992 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 10:31:34.994 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 488.1433ms
+2023-12-12 10:31:46.285 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 10:31:46.287 +05:30 [INF] CORS policy execution successful.
+2023-12-12 10:31:46.288 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 10:31:46.289 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 10:31:46.292 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 10:31:46.295 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 10:31:46.297 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 10:31:46.299 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 7.4793ms
+2023-12-12 10:31:46.300 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 10:31:46.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 15.8064ms
+2023-12-12 11:07:29.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 11:07:29.685 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:29.686 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:07:29.687 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:07:29.691 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:07:29.859 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 11:07:29.862 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:07:29.863 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 173.4383ms
+2023-12-12 11:07:29.866 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:07:29.868 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 189.1651ms
+2023-12-12 11:07:31.896 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor/14a46c14-dd34-4e1e-9e09-e080fd6d3b81 - -
+2023-12-12 11:07:31.897 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:31.898 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 11:07:31.905 +05:30 [INF] Route matched with {action = "GetById", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:07:31.912 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:07:31.924 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 11:07:31.932 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.DoctorDto'.
+2023-12-12 11:07:31.933 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetById (Appointment.API) in 26.3763ms
+2023-12-12 11:07:31.937 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 11:07:31.938 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor/14a46c14-dd34-4e1e-9e09-e080fd6d3b81 - - - 200 - application/json;+charset=utf-8 42.7068ms
+2023-12-12 11:07:45.256 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - -
+2023-12-12 11:07:45.259 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:45.261 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - - - 204 - - 4.9837ms
+2023-12-12 11:07:45.268 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53
+2023-12-12 11:07:45.270 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:45.273 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 11:07:45.275 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-12-12 11:07:45.296 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:07:45.302 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-12 11:07:45.312 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-12-12 11:07:45.325 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-12-12 11:07:45.328 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 38.0044ms
+2023-12-12 11:07:45.333 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 11:07:45.334 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53 - 200 - application/json;+charset=utf-8 66.8194ms
+2023-12-12 11:07:47.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 11:07:47.442 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:47.443 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:07:47.444 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:07:47.447 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:07:47.450 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 11:07:47.454 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:07:47.456 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 10.0854ms
+2023-12-12 11:07:47.458 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:07:47.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 18.3970ms
+2023-12-12 11:07:51.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor/ff01d08e-ce6e-440a-8624-90e749e34e82 - -
+2023-12-12 11:07:51.956 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:07:51.957 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 11:07:51.958 +05:30 [INF] Route matched with {action = "GetById", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:07:51.962 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:07:51.966 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 11:07:51.969 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.DoctorDto'.
+2023-12-12 11:07:51.970 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetById (Appointment.API) in 9.523ms
+2023-12-12 11:07:51.972 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 11:07:51.974 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor/ff01d08e-ce6e-440a-8624-90e749e34e82 - - - 200 - application/json;+charset=utf-8 18.7044ms
+2023-12-12 11:08:00.143 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Slots - -
+2023-12-12 11:08:00.146 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:00.147 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Slots - - - 204 - - 3.7699ms
+2023-12-12 11:08:00.150 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Slots application/json 173
+2023-12-12 11:08:00.152 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:00.156 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 11:08:00.161 +05:30 [INF] Route matched with {action = "Create", controller = "Slots"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddSlotRequestDto) on controller Appointment.API.Controllers.SlotsController (Appointment.API).
+2023-12-12 11:08:00.200 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:08:00.219 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 11:08:00.320 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 11:08:00.564 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-12-12 11:08:00.596 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t0].[AccessFailedCount], [t0].[AddressId], [t0].[Age], [t0].[ConcurrencyStamp], [t0].[DOB], [t0].[Email], [t0].[EmailConfirmed], [t0].[LockoutEnabled], [t0].[LockoutEnd], [t0].[MedicalRecordId], [t0].[Name], [t0].[NormalizedEmail], [t0].[NormalizedUserName], [t0].[PasswordHash], [t0].[PhoneNumber], [t0].[PhoneNumberConfirmed], [t0].[SecurityStamp], [t0].[TwoFactorEnabled], [t0].[UserName], [t1].[BookingsBookingId], [t1].[DoctorsId], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[Fees], [t1].[Hospital], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[Name], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[Qualifications], [t1].[SecurityStamp], [t1].[Specialization], [t1].[TwoFactorEnabled], [t1].[UserName]
+FROM (
+    SELECT TOP(1) [b].[BookingId]
+    FROM [Bookings] AS [b]
+    WHERE [b].[BookingId] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b0].[BookingsBookingId], [b0].[UsersId], [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+    FROM [BookingUsers] AS [b0]
+    INNER JOIN [Users] AS [u] ON [b0].[UsersId] = [u].[Id]
+) AS [t0] ON [t].[BookingId] = [t0].[BookingsBookingId]
+LEFT JOIN (
+    SELECT [b1].[BookingsBookingId], [b1].[DoctorsId], [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+    FROM [BookingDoctors] AS [b1]
+    INNER JOIN [Doctors] AS [d] ON [b1].[DoctorsId] = [d].[Id]
+) AS [t1] ON [t].[BookingId] = [t1].[BookingsBookingId]
+ORDER BY [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t1].[BookingsBookingId], [t1].[DoctorsId]
+2023-12-12 11:08:00.684 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-12-12 11:08:00.687 +05:30 [INF] Executed action Appointment.API.Controllers.SlotsController.Create (Appointment.API) in 522.8504ms
+2023-12-12 11:08:00.689 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 11:08:00.701 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Slots application/json 173 - 400 - text/plain;+charset=utf-8 540.4995ms
+2023-12-12 11:08:06.041 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Slots - -
+2023-12-12 11:08:06.044 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:06.045 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Slots - - - 204 - - 4.1473ms
+2023-12-12 11:08:06.046 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Slots application/json 173
+2023-12-12 11:08:06.047 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:06.048 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 11:08:06.049 +05:30 [INF] Route matched with {action = "Create", controller = "Slots"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddSlotRequestDto) on controller Appointment.API.Controllers.SlotsController (Appointment.API).
+2023-12-12 11:08:06.052 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:08:06.055 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 11:08:06.061 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 11:08:06.069 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t0].[AccessFailedCount], [t0].[AddressId], [t0].[Age], [t0].[ConcurrencyStamp], [t0].[DOB], [t0].[Email], [t0].[EmailConfirmed], [t0].[LockoutEnabled], [t0].[LockoutEnd], [t0].[MedicalRecordId], [t0].[Name], [t0].[NormalizedEmail], [t0].[NormalizedUserName], [t0].[PasswordHash], [t0].[PhoneNumber], [t0].[PhoneNumberConfirmed], [t0].[SecurityStamp], [t0].[TwoFactorEnabled], [t0].[UserName], [t1].[BookingsBookingId], [t1].[DoctorsId], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[Fees], [t1].[Hospital], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[Name], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[Qualifications], [t1].[SecurityStamp], [t1].[Specialization], [t1].[TwoFactorEnabled], [t1].[UserName]
+FROM (
+    SELECT TOP(1) [b].[BookingId]
+    FROM [Bookings] AS [b]
+    WHERE [b].[BookingId] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b0].[BookingsBookingId], [b0].[UsersId], [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+    FROM [BookingUsers] AS [b0]
+    INNER JOIN [Users] AS [u] ON [b0].[UsersId] = [u].[Id]
+) AS [t0] ON [t].[BookingId] = [t0].[BookingsBookingId]
+LEFT JOIN (
+    SELECT [b1].[BookingsBookingId], [b1].[DoctorsId], [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+    FROM [BookingDoctors] AS [b1]
+    INNER JOIN [Doctors] AS [d] ON [b1].[DoctorsId] = [d].[Id]
+) AS [t1] ON [t].[BookingId] = [t1].[BookingsBookingId]
+ORDER BY [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t1].[BookingsBookingId], [t1].[DoctorsId]
+2023-12-12 11:08:06.323 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Slots] ([Id], [DoctorId], [EndTime], [StartTime], [TimeSpan], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-12-12 11:08:06.412 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingId])
+VALUES (@p0);
+2023-12-12 11:08:06.419 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BookingDoctors] ([BookingsBookingId], [DoctorsId])
+VALUES (@p0, @p1);
+2023-12-12 11:08:06.422 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BookingUsers] ([BookingsBookingId], [UsersId])
+VALUES (@p0, @p1);
+2023-12-12 11:08:06.435 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Appointment.API.Models.DTO.SlotDto'.
+2023-12-12 11:08:06.488 +05:30 [INF] Executed action Appointment.API.Controllers.SlotsController.Create (Appointment.API) in 436.7167ms
+2023-12-12 11:08:06.490 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 11:08:06.491 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Slots application/json 173 - 201 - application/json;+charset=utf-8 444.3665ms
+2023-12-12 11:08:41.320 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - -
+2023-12-12 11:08:41.323 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:41.324 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Auth/Login - - - 204 - - 3.4475ms
+2023-12-12 11:08:41.325 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53
+2023-12-12 11:08:41.326 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:41.327 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 11:08:41.328 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Appointment.API.Models.DTO.LoginRequestDto) on controller Appointment.API.Controllers.AuthController (Appointment.API).
+2023-12-12 11:08:41.331 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:08:41.336 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-12 11:08:41.345 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-12-12 11:08:41.350 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.LoginResponseDto'.
+2023-12-12 11:08:41.353 +05:30 [INF] Executed action Appointment.API.Controllers.AuthController.Login (Appointment.API) in 22.5189ms
+2023-12-12 11:08:41.355 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AuthController.Login (Appointment.API)'
+2023-12-12 11:08:41.357 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Auth/Login application/json 53 - 200 - application/json;+charset=utf-8 31.1864ms
+2023-12-12 11:08:44.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 11:08:44.005 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:08:44.006 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:08:44.007 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:08:44.010 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:08:44.027 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 11:08:44.031 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:08:44.033 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 23.8396ms
+2023-12-12 11:08:44.035 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:08:44.036 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 32.4200ms
+2023-12-12 11:11:09.431 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 11:11:09.434 +05:30 [INF] CORS policy execution successful.
+2023-12-12 11:11:09.435 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:11:09.436 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 11:11:09.439 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 11:11:09.443 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 11:11:09.446 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 11:11:09.447 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 8.4137ms
+2023-12-12 11:11:09.448 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 11:11:09.449 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 17.9845ms
+2023-12-12 12:22:47.140 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 12:22:48.732 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 12:22:48.768 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 12:22:48.778 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 12:22:48.827 +05:30 [INF] Hosting environment: Development
+2023-12-12 12:22:48.837 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 12:22:49.960 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 12:22:52.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 12:22:52.317 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 12:22:52.348 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 2391.4012ms
+2023-12-12 12:22:52.385 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 109.8125ms
+2023-12-12 12:22:52.890 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 573.3007ms
+2023-12-12 12:22:52.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 12:22:53.310 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 327.4768ms
+2023-12-12 14:09:08.584 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 14:10:22.858 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 14:10:23.190 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 14:10:23.191 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 14:10:23.196 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 14:10:23.197 +05:30 [INF] Hosting environment: Development
+2023-12-12 14:10:23.198 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 14:10:29.211 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 14:10:29.864 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 660.4803ms
+2023-12-12 14:10:29.868 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 14:10:29.887 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 18.8205ms
+2023-12-12 14:10:29.891 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 14:10:29.940 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.8665ms
+2023-12-12 14:10:30.064 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 14:10:30.101 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - Appointment.API.Controllers.AddressController.GetAll (Appointment.API). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-12-12 14:10:30.160 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 95.9539ms
+2023-12-12 14:11:38.728 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 14:11:39.113 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 14:11:39.115 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 14:11:39.122 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 14:11:39.124 +05:30 [INF] Hosting environment: Development
+2023-12-12 14:11:39.125 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 14:11:40.693 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 14:11:41.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 14:11:41.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 14:11:41.161 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 473.7962ms
+2023-12-12 14:11:41.164 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 6.1992ms
+2023-12-12 14:11:41.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.9565ms
+2023-12-12 14:11:41.259 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 14:11:41.389 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.8504ms
+2023-12-12 14:11:50.669 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Address - -
+2023-12-12 14:11:50.856 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 14:11:50.891 +05:30 [INF] Route matched with {action = "GetAll", controller = "Address"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.AddressController (Appointment.API).
+2023-12-12 14:11:52.829 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 14:11:54.503 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AddressId], [a].[City], [a].[Locality], [a].[State]
+FROM [Addresses] AS [a]
+2023-12-12 14:11:54.651 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.AddressDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 14:11:54.681 +05:30 [INF] Executed action Appointment.API.Controllers.AddressController.GetAll (Appointment.API) in 3782.6187ms
+2023-12-12 14:11:54.684 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 14:11:54.694 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Address - - - 200 - application/json;+charset=utf-8 4025.4532ms
+2023-12-12 14:12:56.021 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Address/3fa85f64-5717-4562-b3fc-2c963f66afa6 application/json 70
+2023-12-12 14:12:56.032 +05:30 [INF] CORS policy execution successful.
+2023-12-12 14:12:56.041 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 14:12:56.051 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 14:12:56.052 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Address/3fa85f64-5717-4562-b3fc-2c963f66afa6 application/json 70 - 401 0 - 31.7896ms
+2023-12-12 14:13:24.684 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 14:13:25.050 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 14:13:25.051 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 14:13:25.056 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 14:13:25.057 +05:30 [INF] Hosting environment: Development
+2023-12-12 14:13:25.058 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 14:13:26.999 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 14:13:27.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 14:13:27.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 14:13:27.463 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 469.4915ms
+2023-12-12 14:13:27.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 6.3474ms
+2023-12-12 14:13:27.489 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.9339ms
+2023-12-12 14:13:27.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 14:13:27.675 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.1096ms
+2023-12-12 14:13:53.831 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Address/3fa85f64-5717-4562-b3fc-2c963f66afa6 application/json 76
+2023-12-12 14:13:53.839 +05:30 [INF] CORS policy execution successful.
+2023-12-12 14:13:53.930 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AddressController.Update (Appointment.API)'
+2023-12-12 14:13:53.974 +05:30 [INF] Route matched with {action = "Update", controller = "Address"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Guid, Appointment.API.Models.DTO.UpdateAddressRequestDto) on controller Appointment.API.Controllers.AddressController (Appointment.API).
+2023-12-12 14:13:55.358 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 14:13:56.536 +05:30 [INF] Executed DbCommand (102ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AddressId], [a].[City], [a].[Locality], [a].[State]
+FROM [Addresses] AS [a]
+WHERE [a].[AddressId] = @__id_0
+2023-12-12 14:13:56.824 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Addresses] SET [City] = @p0, [Locality] = @p1, [State] = @p2
+WHERE [AddressId] = @p3;
+SELECT @@ROWCOUNT;
+2023-12-12 14:13:56.902 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.AddressDto'.
+2023-12-12 14:13:56.931 +05:30 [INF] Executed action Appointment.API.Controllers.AddressController.Update (Appointment.API) in 2947.2003ms
+2023-12-12 14:13:56.934 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AddressController.Update (Appointment.API)'
+2023-12-12 14:13:56.944 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Address/3fa85f64-5717-4562-b3fc-2c963f66afa6 application/json 76 - 200 - application/json;+charset=utf-8 3113.2643ms
+2023-12-12 14:14:20.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users - -
+2023-12-12 14:14:20.051 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-12-12 14:14:20.055 +05:30 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 14:14:20.070 +05:30 [INF] GetAll users Action method was invoked
+2023-12-12 14:14:20.080 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 14:14:20.120 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+2023-12-12 14:14:20.226 +05:30 [INF] Finished GetAllUsers request with data:[{"Name":"user3","Age":23,"DOB":"2023-12-07T12:16:09.455","AddressId":"b5d1093c-4819-4d7d-8c69-ddea641afcd6","Address":null,"MedicalRecordId":null,"MedicalRecord":null,"Id":"4c0b5827-c3ce-44cf-a12f-c2e2870ba5e1","UserName":"user3@gmail.com","NormalizedUserName":"USER3@GMAIL.COM","Email":"user3@gmail.com","NormalizedEmail":"USER3@GMAIL.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEDz0efmXjRxiIM8ftFBEKpK8yhne22p2\u002BNyy9/2IMuR52GhkWF4h0coG\u002BLlFKqTz2A==","SecurityStamp":"G52JXN3GEUMLHYEKGM56WS3UXF5VT4TS","ConcurrencyStamp":"ec0965c8-1cf7-40e4-93a9-59f8901d94df","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"Name":"user2","Age":23,"DOB":"2023-12-07T11:35:33.161","AddressId":"1f0fd516-011c-458d-9085-727ddcf19b98","Address":null,"MedicalRecordId":null,"MedicalRecord":null,"Id":"71ce4c9d-9b14-4201-af30-cd85aadf2a06","UserName":"user2@gmail.com","NormalizedUserName":"USER2@GMAIL.COM","Email":"user2@gmail.com","NormalizedEmail":"USER2@GMAIL.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEBCW0yNWeNuKiU\u002B0P8mNbNF84lnpHXi6gIotAOkJqyRjsAyn4u5m6C2f6fRD/95EYw==","SecurityStamp":"WYHCDDSAVZTH7OLL2VNEWFKK4LA6MMYM","ConcurrencyStamp":"fa9884db-91aa-4874-81ff-7b52b96b1733","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0},{"Name":"user1","Age":23,"DOB":"2023-12-07T11:35:33.161","AddressId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Address":null,"MedicalRecordId":null,"MedicalRecord":null,"Id":"93a4cabf-5f4f-4a84-9795-290bdddf154d","UserName":"user1@gmail.com","NormalizedUserName":"USER1@GMAIL.COM","Email":"user1@gmail.com","NormalizedEmail":"USER1@GMAIL.COM","EmailConfirmed":false,"PasswordHash":"AQAAAAEAACcQAAAAEHnbIwrXkXs/wgY/EY6qH5G/uVwV1WmrGvuLUNOfnJ7bAWsmye3VJANeeMv\u002BJUFLMg==","SecurityStamp":"KB2EN2K2V5GX2TP4B5CO4G5MDGQ4LWIF","ConcurrencyStamp":"f7d86e2a-0664-48ab-91d9-4c7ec7e49610","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEnd":null,"LockoutEnabled":true,"AccessFailedCount":0}]
+2023-12-12 14:14:20.240 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.UserDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 14:14:20.253 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetAll (Appointment.API) in 196.2352ms
+2023-12-12 14:14:20.254 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetAll (Appointment.API)'
+2023-12-12 14:14:20.255 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users - - - 200 - application/json;+charset=utf-8 243.3580ms
+2023-12-12 15:22:57.313 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 15:22:57.318 +05:30 [INF] CORS policy execution successful.
+2023-12-12 15:22:57.321 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 15:22:57.325 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 15:22:57.410 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 15:22:57.996 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 15:22:58.042 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 15:22:58.047 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 720.4163ms
+2023-12-12 15:22:58.049 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 15:22:58.050 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 737.2365ms
+2023-12-12 15:23:40.116 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor - -
+2023-12-12 15:23:40.126 +05:30 [INF] CORS policy execution successful.
+2023-12-12 15:23:40.126 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 15:23:40.128 +05:30 [INF] Route matched with {action = "GetAll", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 15:23:40.142 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 15:23:40.147 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+2023-12-12 15:23:40.151 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.DoctorDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 15:23:40.153 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetAll (Appointment.API) in 23.2179ms
+2023-12-12 15:23:40.155 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetAll (Appointment.API)'
+2023-12-12 15:23:40.156 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor - - - 200 - application/json;+charset=utf-8 41.0310ms
+2023-12-12 15:23:43.910 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Doctor/7d529ae8-bd15-42eb-aca8-8757ec3ae6a1 - -
+2023-12-12 15:23:43.912 +05:30 [INF] CORS policy execution successful.
+2023-12-12 15:23:43.912 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 15:23:43.917 +05:30 [INF] Route matched with {action = "GetById", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.DoctorController (Appointment.API).
+2023-12-12 15:23:43.923 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 15:23:43.931 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 15:23:43.937 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.DoctorDto'.
+2023-12-12 15:23:43.939 +05:30 [INF] Executed action Appointment.API.Controllers.DoctorController.GetById (Appointment.API) in 19.9176ms
+2023-12-12 15:23:43.940 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.DoctorController.GetById (Appointment.API)'
+2023-12-12 15:23:43.941 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Doctor/7d529ae8-bd15-42eb-aca8-8757ec3ae6a1 - - - 200 - application/json;+charset=utf-8 30.9269ms
+2023-12-12 15:23:53.799 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7133/api/Slots - -
+2023-12-12 15:23:53.802 +05:30 [INF] CORS policy execution successful.
+2023-12-12 15:23:53.806 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7133/api/Slots - - - 204 - - 6.5850ms
+2023-12-12 15:23:53.808 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7133/api/Slots application/json 173
+2023-12-12 15:23:53.809 +05:30 [INF] CORS policy execution successful.
+2023-12-12 15:23:53.811 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 15:23:53.815 +05:30 [INF] Route matched with {action = "Create", controller = "Slots"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Appointment.API.Models.DTO.AddSlotRequestDto) on controller Appointment.API.Controllers.SlotsController (Appointment.API).
+2023-12-12 15:23:53.843 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 15:23:53.913 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 15:23:53.923 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__id_0
+2023-12-12 15:23:54.151 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-12-12 15:23:54.173 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t0].[AccessFailedCount], [t0].[AddressId], [t0].[Age], [t0].[ConcurrencyStamp], [t0].[DOB], [t0].[Email], [t0].[EmailConfirmed], [t0].[LockoutEnabled], [t0].[LockoutEnd], [t0].[MedicalRecordId], [t0].[Name], [t0].[NormalizedEmail], [t0].[NormalizedUserName], [t0].[PasswordHash], [t0].[PhoneNumber], [t0].[PhoneNumberConfirmed], [t0].[SecurityStamp], [t0].[TwoFactorEnabled], [t0].[UserName], [t1].[BookingsBookingId], [t1].[DoctorsId], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[Fees], [t1].[Hospital], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[Name], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[Qualifications], [t1].[SecurityStamp], [t1].[Specialization], [t1].[TwoFactorEnabled], [t1].[UserName]
+FROM (
+    SELECT TOP(1) [b].[BookingId]
+    FROM [Bookings] AS [b]
+    WHERE [b].[BookingId] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [b0].[BookingsBookingId], [b0].[UsersId], [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+    FROM [BookingUsers] AS [b0]
+    INNER JOIN [Users] AS [u] ON [b0].[UsersId] = [u].[Id]
+) AS [t0] ON [t].[BookingId] = [t0].[BookingsBookingId]
+LEFT JOIN (
+    SELECT [b1].[BookingsBookingId], [b1].[DoctorsId], [d].[Id], [d].[AccessFailedCount], [d].[ConcurrencyStamp], [d].[Email], [d].[EmailConfirmed], [d].[Fees], [d].[Hospital], [d].[LockoutEnabled], [d].[LockoutEnd], [d].[Name], [d].[NormalizedEmail], [d].[NormalizedUserName], [d].[PasswordHash], [d].[PhoneNumber], [d].[PhoneNumberConfirmed], [d].[Qualifications], [d].[SecurityStamp], [d].[Specialization], [d].[TwoFactorEnabled], [d].[UserName]
+    FROM [BookingDoctors] AS [b1]
+    INNER JOIN [Doctors] AS [d] ON [b1].[DoctorsId] = [d].[Id]
+) AS [t1] ON [t].[BookingId] = [t1].[BookingsBookingId]
+ORDER BY [t].[BookingId], [t0].[BookingsBookingId], [t0].[UsersId], [t0].[Id], [t1].[BookingsBookingId], [t1].[DoctorsId]
+2023-12-12 15:23:54.317 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 450), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Slots] ([Id], [DoctorId], [EndTime], [StartTime], [TimeSpan], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-12-12 15:23:54.410 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Bookings] ([BookingId])
+VALUES (@p0);
+2023-12-12 15:23:54.418 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BookingDoctors] ([BookingsBookingId], [DoctorsId])
+VALUES (@p0, @p1);
+2023-12-12 15:23:54.422 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [BookingUsers] ([BookingsBookingId], [UsersId])
+VALUES (@p0, @p1);
+2023-12-12 15:23:54.436 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'Appointment.API.Models.DTO.SlotDto'.
+2023-12-12 15:23:54.480 +05:30 [INF] Executed action Appointment.API.Controllers.SlotsController.Create (Appointment.API) in 662.3923ms
+2023-12-12 15:23:54.482 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.SlotsController.Create (Appointment.API)'
+2023-12-12 15:23:54.484 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7133/api/Slots application/json 173 - 201 - application/json;+charset=utf-8 675.8034ms
+2023-12-12 16:00:14.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 16:00:14.844 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 16:00:14.853 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:00:14.867 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 16:00:15.166 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 16:00:15.173 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 16:00:15.175 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 314.6806ms
+2023-12-12 16:00:15.180 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 16:00:15.183 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 341.2697ms
+2023-12-12 16:02:36.915 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 332
+2023-12-12 16:02:36.918 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:02:36.926 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 16:02:36.936 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 16:02:36.937 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 332 - 401 0 - 22.1255ms
+2023-12-12 16:03:04.127 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 332
+2023-12-12 16:03:04.130 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:03:04.131 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 16:03:04.133 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 16:03:04.135 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 332 - 401 0 - 7.8134ms
+2023-12-12 16:03:23.622 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 16:03:23.643 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 20.5562ms
+2023-12-12 16:03:23.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 16:03:23.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 16:03:23.648 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 1.9256ms
+2023-12-12 16:03:23.664 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.8624ms
+2023-12-12 16:03:23.936 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 16:03:23.968 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 32.1194ms
+2023-12-12 16:04:27.680 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 337
+2023-12-12 16:04:27.683 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:04:27.685 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 16:04:27.687 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 16:04:27.692 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 337 - 401 0 - 11.9757ms
+2023-12-12 16:04:34.562 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 336
+2023-12-12 16:04:34.565 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:04:34.566 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 16:04:34.567 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 16:04:34.568 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 336 - 401 0 - 5.7998ms
+2023-12-12 16:05:01.409 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 1298
+2023-12-12 16:05:01.412 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:05:01.413 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (User)
+2023-12-12 16:05:01.414 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-12-12 16:05:01.415 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 1298 - 401 0 - 5.8842ms
+2023-12-12 16:05:53.087 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 16:05:53.522 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 16:05:53.524 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 16:05:53.529 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 16:05:53.530 +05:30 [INF] Hosting environment: Development
+2023-12-12 16:05:53.531 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 16:05:56.715 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 16:05:57.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 588.7385ms
+2023-12-12 16:05:57.300 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 16:05:57.300 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 16:05:57.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 16.9933ms
+2023-12-12 16:05:57.331 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.9226ms
+2023-12-12 16:05:57.568 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 16:05:57.738 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 169.7015ms
+2023-12-12 16:06:41.181 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 337
+2023-12-12 16:06:41.191 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:06:41.293 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:06:41.338 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, Appointment.API.Models.DTO.UpdateUserRequestDto) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:06:41.855 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-12 16:06:41.889 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.Update (Appointment.API) in 539.1616ms
+2023-12-12 16:06:41.896 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:06:41.900 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 337 - 400 - application/problem+json;+charset=utf-8 719.5667ms
+2023-12-12 16:06:59.981 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 338
+2023-12-12 16:06:59.986 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:06:59.988 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:06:59.993 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, Appointment.API.Models.DTO.UpdateUserRequestDto) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:07:01.254 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 16:07:02.720 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 16:07:02.965 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 16:07:02.978 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.Update (Appointment.API) in 2974.9668ms
+2023-12-12 16:07:02.980 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:07:02.989 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 338 - 200 - application/json;+charset=utf-8 3007.7564ms
+2023-12-12 16:08:58.845 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 194
+2023-12-12 16:08:58.886 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:08:58.890 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:08:58.891 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, Appointment.API.Models.DTO.UpdateUserRequestDto) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:08:58.904 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 16:08:58.922 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 16:08:58.928 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 16:08:58.931 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.Update (Appointment.API) in 38.428ms
+2023-12-12 16:08:58.933 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:08:58.936 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 194 - 200 - application/json;+charset=utf-8 90.3308ms
+2023-12-12 16:11:55.896 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 339
+2023-12-12 16:11:55.936 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:11:55.938 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:11:55.939 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, Appointment.API.Models.DTO.UpdateUserRequestDto) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:11:55.944 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-12 16:11:55.946 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.Update (Appointment.API) in 4.3357ms
+2023-12-12 16:11:55.948 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:11:55.949 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 339 - 400 - application/problem+json;+charset=utf-8 53.1286ms
+2023-12-12 16:12:23.407 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 340
+2023-12-12 16:12:23.413 +05:30 [INF] CORS policy execution successful.
+2023-12-12 16:12:23.415 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:12:23.417 +05:30 [INF] Route matched with {action = "Update", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, Appointment.API.Models.DTO.UpdateUserRequestDto) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 16:12:23.475 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 16:12:23.480 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 16:12:23.484 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 16:12:23.485 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.Update (Appointment.API) in 65.6897ms
+2023-12-12 16:12:23.487 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.Update (Appointment.API)'
+2023-12-12 16:12:23.488 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d application/json 340 - 200 - application/json;+charset=utf-8 80.9635ms
+2023-12-12 16:12:31.433 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Address - -
+2023-12-12 16:12:31.436 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 16:12:31.441 +05:30 [INF] Route matched with {action = "GetAll", controller = "Address"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.AddressController (Appointment.API).
+2023-12-12 16:12:31.452 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 16:12:31.468 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AddressId], [a].[City], [a].[Locality], [a].[State]
+FROM [Addresses] AS [a]
+2023-12-12 16:12:31.508 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.AddressDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 16:12:31.514 +05:30 [INF] Executed action Appointment.API.Controllers.AddressController.GetAll (Appointment.API) in 68.7757ms
+2023-12-12 16:12:31.515 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 16:12:31.517 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Address - - - 200 - application/json;+charset=utf-8 83.5251ms
+2023-12-12 17:25:09.473 +05:30 [INF] User profile is available. Using 'C:\Users\2000108446\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-12 17:25:09.900 +05:30 [INF] Now listening on: https://localhost:7133
+2023-12-12 17:25:09.902 +05:30 [INF] Now listening on: http://localhost:5100
+2023-12-12 17:25:09.908 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-12 17:25:09.909 +05:30 [INF] Hosting environment: Development
+2023-12-12 17:25:09.909 +05:30 [INF] Content root path: C:\Users\2000108446\source\repos\Proj\API\Appointment.API\Appointment.API\
+2023-12-12 17:25:15.918 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/index.html - -
+2023-12-12 17:25:16.619 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/index.html - - - 200 - text/html;charset=utf-8 707.2862ms
+2023-12-12 17:25:16.621 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - -
+2023-12-12 17:25:16.630 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/_vs/browserLink - -
+2023-12-12 17:25:16.641 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_framework/aspnetcore-browser-refresh.js - - - 200 12362 application/javascript;+charset=utf-8 19.5015ms
+2023-12-12 17:25:16.692 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.4343ms
+2023-12-12 17:25:16.837 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - -
+2023-12-12 17:25:17.057 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 219.9084ms
+2023-12-12 17:25:58.755 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Address - -
+2023-12-12 17:25:58.941 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 17:25:58.980 +05:30 [INF] Route matched with {action = "GetAll", controller = "Address"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller Appointment.API.Controllers.AddressController (Appointment.API).
+2023-12-12 17:26:00.722 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 17:26:02.334 +05:30 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AddressId], [a].[City], [a].[Locality], [a].[State]
+FROM [Addresses] AS [a]
+2023-12-12 17:26:02.510 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Appointment.API.Models.DTO.AddressDto, Appointment.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-12 17:26:02.544 +05:30 [INF] Executed action Appointment.API.Controllers.AddressController.GetAll (Appointment.API) in 3552.5029ms
+2023-12-12 17:26:02.547 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.AddressController.GetAll (Appointment.API)'
+2023-12-12 17:26:02.557 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Address - - - 200 - application/json;+charset=utf-8 3801.8398ms
+2023-12-12 17:38:02.834 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 17:38:02.845 +05:30 [INF] CORS policy execution successful.
+2023-12-12 17:38:02.847 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:38:02.862 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 17:38:02.919 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 17:38:03.479 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 17:38:03.568 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 17:38:03.599 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 732.5957ms
+2023-12-12 17:38:03.600 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:38:03.602 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 767.8708ms
+2023-12-12 17:44:44.440 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 17:44:44.443 +05:30 [INF] CORS policy execution successful.
+2023-12-12 17:44:44.445 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:44:44.446 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 17:44:44.541 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 17:44:44.552 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 17:44:44.556 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 17:44:44.558 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 110.2274ms
+2023-12-12 17:44:44.559 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:44:44.561 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 120.3973ms
+2023-12-12 17:52:42.223 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 17:52:42.225 +05:30 [INF] CORS policy execution successful.
+2023-12-12 17:52:42.226 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:52:42.227 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 17:52:42.236 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 17:52:42.390 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 17:52:42.393 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 17:52:42.394 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 165.931ms
+2023-12-12 17:52:42.396 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:52:42.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 173.5870ms
+2023-12-12 17:54:09.261 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 17:54:09.264 +05:30 [INF] CORS policy execution successful.
+2023-12-12 17:54:09.265 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:54:09.266 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 17:54:09.268 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 17:54:09.273 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 17:54:09.276 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 17:54:09.277 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 9.9142ms
+2023-12-12 17:54:09.279 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 17:54:09.280 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 18.4898ms
+2023-12-12 18:02:19.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:02:19.648 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:02:19.648 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:02:19.649 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:02:19.652 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:02:20.128 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:02:20.131 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:02:20.133 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 481.9457ms
+2023-12-12 18:02:20.134 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:02:20.135 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 489.4966ms
+2023-12-12 18:02:40.828 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:02:40.830 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:02:40.830 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:02:40.831 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:02:40.834 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:02:40.842 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:02:40.844 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:02:40.845 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 12.0081ms
+2023-12-12 18:02:40.847 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:02:40.847 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 19.4672ms
+2023-12-12 18:04:13.450 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:04:13.452 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:04:13.453 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:04:13.454 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:04:13.457 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:04:13.462 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:04:13.466 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:04:13.467 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 11.1133ms
+2023-12-12 18:04:13.469 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:04:13.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 20.0220ms
+2023-12-12 18:04:49.654 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:04:49.656 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:04:49.657 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:04:49.658 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:04:49.660 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:04:49.664 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:04:49.667 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:04:49.668 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 8.8446ms
+2023-12-12 18:04:49.670 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:04:49.671 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 16.5588ms
+2023-12-12 18:06:43.821 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:06:43.824 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:06:43.824 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:06:43.826 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:06:43.829 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:06:43.836 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:06:43.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:06:43.844 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 15.7815ms
+2023-12-12 18:06:43.845 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:06:43.846 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 25.5719ms
+2023-12-12 18:06:46.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - -
+2023-12-12 18:06:46.189 +05:30 [INF] CORS policy execution successful.
+2023-12-12 18:06:46.191 +05:30 [INF] Executing endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:06:46.192 +05:30 [INF] Route matched with {action = "GetById", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.String) on controller Appointment.API.Controllers.UsersController (Appointment.API).
+2023-12-12 18:06:46.195 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'AppointmentApiDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2023-12-12 18:06:46.218 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[AddressId], [u].[Age], [u].[ConcurrencyStamp], [u].[DOB], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[MedicalRecordId], [u].[Name], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+2023-12-12 18:06:46.225 +05:30 [INF] Executing OkObjectResult, writing value of type 'Appointment.API.Models.DTO.UserDto'.
+2023-12-12 18:06:46.226 +05:30 [INF] Executed action Appointment.API.Controllers.UsersController.GetById (Appointment.API) in 32.0359ms
+2023-12-12 18:06:46.232 +05:30 [INF] Executed endpoint 'Appointment.API.Controllers.UsersController.GetById (Appointment.API)'
+2023-12-12 18:06:46.234 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7133/api/Users/93a4cabf-5f4f-4a84-9795-290bdddf154d - - - 200 - application/json;+charset=utf-8 46.6849ms

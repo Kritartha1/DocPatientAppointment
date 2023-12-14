@@ -54,13 +54,15 @@ namespace Appointment.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id}/{user:bool}")]
+       
+        [Route("haha/{id}")]
         /*  [Authorize(Roles = "User,Doctor")]*/
 
-        public async Task<IActionResult> GetAllUserAppts([FromRoute] string id,bool user)
+        public async Task<IActionResult> GetAllUserAppts([FromRoute] string id)
         {
-            if(user)
-            {
+            //,bool user=true
+            //if (user)
+            //{
                 var userDomain = await userRepository.GetByIdAsync(id);
                 if (userDomain == null)
                 {
@@ -73,8 +75,8 @@ namespace Appointment.API.Controllers
                     return Ok(apptsDto); //200 response
                 }
 
-            }
-            else
+            //}
+          /*  else
             {
                 var doctorDomain = await doctorRepository.GetByIdAsync(id);
                 if (doctorDomain == null)
@@ -87,7 +89,7 @@ namespace Appointment.API.Controllers
                     var apptsDto = mapper.Map<List<ApptDto>>(apptsDomain);
                     return Ok(apptsDto); //200 response
                 }
-            }
+            }*/
 
             return BadRequest();//error 400
 

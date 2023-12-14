@@ -28,6 +28,9 @@ namespace Appointment.API.Models.Domain
         [JsonIgnore]
         public ICollection<Booking>? Bookings { get; set; }
 
+        [JsonIgnore]
+        public ICollection<Slot>? Slots { get; set; }   
+
 
 
 

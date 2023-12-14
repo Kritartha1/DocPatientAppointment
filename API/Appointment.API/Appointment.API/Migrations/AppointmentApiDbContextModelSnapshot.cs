@@ -433,7 +433,7 @@ namespace Appointment.API.Migrations
                         .IsRequired();
 
                     b.HasOne("Appointment.API.Models.Domain.User", "User")
-                        .WithMany()
+                        .WithMany("Slots")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -508,6 +508,8 @@ namespace Appointment.API.Migrations
             modelBuilder.Entity("Appointment.API.Models.Domain.User", b =>
                 {
                     b.Navigation("Appts");
+
+                    b.Navigation("Slots");
                 });
 #pragma warning restore 612, 618
         }

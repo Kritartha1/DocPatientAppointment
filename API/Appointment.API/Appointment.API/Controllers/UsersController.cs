@@ -156,7 +156,7 @@ namespace Appointment.API.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        [Authorize(Roles = "User")]
+       /* [Authorize(Roles = "User")]*/
 
         public async Task<IActionResult> Update([FromRoute] string id, [FromBody] UpdateUserRequestDto updateUserRequestDto)
         {

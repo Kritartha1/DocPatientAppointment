@@ -29,5 +29,7 @@ namespace Appointment.API.Models.DTO
 
         public MedicalRecord? MedicalRecord { get; set; }
         public ICollection<Appt>? Appts { get; set; }
+
+        public ICollection<Slot>? Slots { get; set; }
     }
 }
